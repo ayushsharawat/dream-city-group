@@ -1,0 +1,894 @@
+/* ==========================================================================
+   DREAM CITY GROUP, SHAMLI - STYLESHEET (CLEAN SOLID-COLOR FUTURISTIC 2026 THEME)
+   Zero background images. Solid midnight navy, obsidian black, metallic gold.
+   Pure CSS lighting, thin gold borders, and modern architectural depth.
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Montserrat:wght@300;400;500;600;700;800;900&family=Orbitron:wght@500;700;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Midnight Navy & Obsidian Palette */
+  --bg-dark: #030712;
+  --bg-navy: #050b1a;
+  --bg-navy-card: #081226;
+  --bg-surface: #0b1833;
+  --navy-border: rgba(212, 175, 55, 0.2);
+
+  /* Metallic Gold Palette */
+  --gold-highlight: #FFF8D6;
+  --gold-light: #FFDF73;
+  --gold-metallic: #D4AF37;
+  --gold-bronze: #AA771C;
+  --gold-champagne: #F3E5AB;
+
+  /* Gradients (CSS-Only, No Images) */
+  --grad-gold-foil: linear-gradient(135deg, #FFF9D2 0%, #F5DF8E 20%, #D4AF37 50%, #FFF0AA 70%, #996A19 100%);
+  --grad-gold-text: linear-gradient(180deg, #FFFFFF 0%, #FFF2B2 25%, #E5BE4A 60%, #996818 100%);
+  --grad-gold-border: linear-gradient(135deg, rgba(255, 223, 115, 0.8), rgba(212, 175, 55, 0.3), rgba(255, 245, 192, 0.7));
+  --grad-hero-css-light: radial-gradient(ellipse 70% 50% at 50% 15%, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
+}
+
+/* Reset & Base */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Space Grotesk', 'Montserrat', sans-serif;
+  background-color: var(--bg-dark);
+  color: #F8FAFC;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: var(--bg-dark);
+  line-height: 1.6;
+}
+
+/* Typography Classes */
+.font-cinzel {
+  font-family: 'Cinzel', Georgia, serif;
+}
+
+.font-playfair {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.font-orbitron {
+  font-family: 'Orbitron', monospace;
+}
+
+.font-space {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* 3D Metallic Gold Text Effect */
+.text-gold-3d {
+  background: var(--grad-gold-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 0px rgba(0, 0, 0, 0.9))
+          drop-shadow(0 4px 15px rgba(212, 175, 55, 0.4));
+}
+
+.text-gold-metallic {
+  color: var(--gold-metallic);
+}
+
+.text-gold-light {
+  color: var(--gold-light);
+}
+
+.text-gold-champagne {
+  color: var(--gold-champagne);
+}
+
+/* Subtle Geometric Architectural CSS Pattern (CSS-Only, No Images) */
+.cyber-grid {
+  background-image: 
+    linear-gradient(to right, rgba(212, 175, 55, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(212, 175, 55, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Clean Scanline Accent */
+.cyber-scanline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 223, 115, 0.6), transparent);
+  animation: scanlineSweep 8s infinite linear;
+  pointer-events: none;
+  z-index: 10;
+}
+
+@keyframes scanlineSweep {
+  0% { transform: translateY(0); opacity: 0; }
+  15% { opacity: 0.8; }
+  85% { opacity: 0.8; }
+  100% { transform: translateY(800px); opacity: 0; }
+}
+
+/* HUD Corner Brackets */
+.hud-corner-tl {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border-top: 1.5px solid var(--gold-light);
+  border-left: 1.5px solid var(--gold-light);
+  pointer-events: none;
+}
+.hud-corner-tr {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 8px;
+  height: 8px;
+  border-top: 1.5px solid var(--gold-light);
+  border-right: 1.5px solid var(--gold-light);
+  pointer-events: none;
+}
+.hud-corner-bl {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border-bottom: 1.5px solid var(--gold-light);
+  border-left: 1.5px solid var(--gold-light);
+  pointer-events: none;
+}
+.hud-corner-br {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 8px;
+  height: 8px;
+  border-bottom: 1.5px solid var(--gold-light);
+  border-right: 1.5px solid var(--gold-light);
+  pointer-events: none;
+}
+
+/* Buttons */
+.btn-gold {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 2.2rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 0.825rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #030712;
+  background: var(--grad-gold-foil);
+  border: 1px solid #FFF8D6;
+  border-radius: 9999px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.25);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-gold::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+  transition: 0.5s;
+}
+
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(255, 223, 115, 0.45);
+  color: #000;
+}
+
+.btn-gold:hover::after {
+  left: 100%;
+}
+
+.btn-navy {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 2.2rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 0.825rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #F8FAFC;
+  background: rgba(8, 18, 38, 0.9);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-radius: 9999px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-navy:hover {
+  background: rgba(212, 175, 55, 0.12);
+  border-color: #FFDF73;
+  color: #FFDF73;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* ==========================================================================
+   HERO SECTION (PREMIUM LIGHT CHAMPAGNE & IVORY AESTHETIC)
+   Sophisticated light background with deep navy typography & metallic gold accents.
+   ========================================================================== */
+.hero-wrapper {
+  position: relative;
+  width: 100%;
+  background-color: #FAF7F0;
+  background-image: 
+    radial-gradient(ellipse 90% 60% at 50% 5%, #FFFFFF 0%, #FAF5EC 45%, #F0E6D8 100%);
+  color: #061124;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Subtle Golden Lighting Glow */
+.hero-css-glow {
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 920px;
+  max-width: 95vw;
+  height: 420px;
+  background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.16) 0%, rgba(255, 235, 170, 0.08) 50%, transparent 70%);
+  filter: blur(55px);
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   DOMINANT HERO CARS ON CLEAN LUXURY CSS SHOWROOM PLATFORM
+   Side-by-side, large, realistic ground shadows on elegant light ground
+   ========================================================================== */
+.hero-cars-stage {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  margin: 1rem auto 1.5rem;
+  z-index: 20;
+  padding: 0 1rem;
+}
+
+/* Elegant CSS Showroom Platform Line */
+.hero-cars-platform-line {
+  position: absolute;
+  bottom: 45px;
+  left: 5%;
+  width: 90%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(184, 134, 27, 0.4) 25%, rgba(212, 175, 55, 0.8) 50%, rgba(184, 134, 27, 0.4) 75%, transparent);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.35);
+  pointer-events: none;
+}
+
+.hero-cars-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.hero-car-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.hero-car-item:hover {
+  transform: translateY(-4px);
+}
+
+.hero-car-img-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 620px;
+  height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s ease-out;
+}
+
+.hero-car-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 15px 22px rgba(6, 17, 36, 0.4));
+  transition: filter 0.3s ease;
+  user-select: none;
+}
+
+/* Realistic CSS ground shadow under each car */
+.car-ground-shadow {
+  position: absolute;
+  bottom: 12px;
+  left: 6%;
+  width: 88%;
+  height: 28px;
+  background: radial-gradient(ellipse at center, rgba(6, 17, 36, 0.6) 0%, rgba(6, 17, 36, 0.25) 50%, transparent 75%);
+  filter: blur(8px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Subtle gold uplight beneath each car */
+.car-ground-uplight {
+  position: absolute;
+  bottom: 0px;
+  left: 15%;
+  width: 70%;
+  height: 25px;
+  background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.22) 0%, transparent 70%);
+  filter: blur(10px);
+  z-index: -2;
+  pointer-events: none;
+}
+
+/* Promotional Navy & Gold Car Plot Label */
+.car-plot-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #061124;
+  border: 1.5px solid var(--gold-metallic);
+  padding: 0.6rem 1.4rem;
+  border-radius: 9999px;
+  box-shadow: 0 8px 25px rgba(6, 17, 36, 0.35), 0 0 12px rgba(212, 175, 55, 0.25);
+  backdrop-filter: blur(12px);
+  z-index: 25;
+  margin-top: -10px;
+  transition: all 0.3s ease;
+}
+
+.hero-car-item:hover .car-plot-label {
+  border-color: #FFF2B2;
+  box-shadow: 0 8px 30px rgba(255, 223, 115, 0.35);
+}
+
+.car-plot-label .plot-text {
+  font-family: 'Cinzel', serif;
+  font-weight: 800;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  color: #FFFFFF;
+}
+
+.car-plot-label .separator {
+  color: var(--gold-metallic);
+  font-weight: bold;
+}
+
+.car-plot-label .car-model {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  background: var(--grad-gold-foil);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ==========================================================================
+   OPEN HORIZONTAL ROLLING ODOMETER COUNTDOWN
+   Light Champagne, Ivory & White Background with Deep Navy Typography
+   and Borderless Metallic-Gold Numbers in One Continuous Horizontal Line
+   ========================================================================== */
+.countdown-section-open {
+  position: relative;
+  background-color: #FAF6EE;
+  background-image: 
+    radial-gradient(ellipse 85% 55% at 50% 15%, #FFFFFF 0%, #FAF5ED 50%, #F0E6D6 100%);
+  padding: 4.5rem 1rem;
+  overflow: hidden;
+  border-top: 1px solid rgba(212, 175, 55, 0.45);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.45);
+}
+
+/* Subtle CSS-Generated Gold Lighting */
+.countdown-champagne-glow {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 920px;
+  max-width: 95vw;
+  height: 380px;
+  background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.16) 0%, rgba(255, 235, 170, 0.08) 45%, transparent 70%);
+  filter: blur(55px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Fine Decorative Architectural Grid Lines */
+.countdown-fine-lines {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: 
+    linear-gradient(90deg, rgba(212, 175, 55, 0.06) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(212, 175, 55, 0.04) 1px, transparent 1px);
+  background-size: 80px 80px;
+  opacity: 0.6;
+}
+
+/* Heading in Deep Navy */
+.countdown-open-heading {
+  color: #061124;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+/* Continuous Horizontal Countdown Strip */
+.countdown-open-strip {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1.8rem;
+  margin: 0 auto;
+  max-width: 980px;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .countdown-open-strip {
+    gap: 1.2rem;
+  }
+}
+@media (max-width: 768px) {
+  .countdown-open-strip {
+    gap: 0.65rem;
+  }
+}
+@media (max-width: 480px) {
+  .countdown-open-strip {
+    gap: 0.35rem;
+  }
+}
+
+/* Individual Unit (Open, Borderless, Box-Free) */
+.countdown-open-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+/* Numbers Container: Common Baseline with Top/Bottom Vertical Fade Mask */
+.countdown-open-numbers {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  height: 96px;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(180deg, transparent 0%, black 15%, black 85%, transparent 100%);
+  mask-image: linear-gradient(180deg, transparent 0%, black 15%, black 85%, transparent 100%);
+}
+
+@media (max-width: 1024px) {
+  .countdown-open-numbers {
+    height: 80px;
+  }
+}
+@media (max-width: 768px) {
+  .countdown-open-numbers {
+    height: 64px;
+  }
+}
+@media (max-width: 480px) {
+  .countdown-open-numbers {
+    height: 48px;
+  }
+}
+
+/* Individual Digit Column Reel */
+.odometer-digit-col {
+  position: relative;
+  width: 52px;
+  height: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .odometer-digit-col {
+    width: 44px;
+  }
+}
+@media (max-width: 768px) {
+  .odometer-digit-col {
+    width: 34px;
+  }
+}
+@media (max-width: 480px) {
+  .odometer-digit-col {
+    width: 24px;
+  }
+}
+
+/* Vertical Ribbon Holding Digits */
+.odometer-ribbon {
+  display: flex;
+  flex-direction: column;
+  will-change: transform;
+}
+
+/* Large Elegant Metallic-Gold Digit Item */
+.odometer-digit-item {
+  height: 96px;
+  line-height: 96px;
+  font-family: 'Cinzel', serif;
+  font-size: clamp(2.6rem, 6.5vw, 5.2rem);
+  font-weight: 900;
+  text-align: center;
+  background: linear-gradient(180deg, #7A4E0B 0%, #B8861B 20%, #ECC95F 45%, #D4AF37 60%, #996515 85%, #6E4204 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 3px 6px rgba(122, 78, 11, 0.25));
+  user-select: none;
+  letter-spacing: -0.02em;
+}
+
+@media (max-width: 1024px) {
+  .odometer-digit-item {
+    height: 80px;
+    line-height: 80px;
+    font-size: 4rem;
+  }
+}
+@media (max-width: 768px) {
+  .odometer-digit-item {
+    height: 64px;
+    line-height: 64px;
+    font-size: 2.8rem;
+  }
+}
+@media (max-width: 480px) {
+  .odometer-digit-item {
+    height: 48px;
+    line-height: 48px;
+    font-size: 1.95rem;
+  }
+}
+
+/* Subtle Gold Colon Separator on Common Baseline */
+.countdown-open-separator {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(2.2rem, 5vw, 4.4rem);
+  font-weight: 800;
+  height: 96px;
+  line-height: 88px;
+  color: #B8861B;
+  opacity: 0.9;
+  user-select: none;
+  padding: 0 0.15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  .countdown-open-separator {
+    height: 80px;
+    line-height: 74px;
+  }
+}
+@media (max-width: 768px) {
+  .countdown-open-separator {
+    height: 64px;
+    line-height: 58px;
+    font-size: 2.3rem;
+    padding: 0 0.05rem;
+  }
+}
+@media (max-width: 480px) {
+  .countdown-open-separator {
+    height: 48px;
+    line-height: 42px;
+    font-size: 1.55rem;
+  }
+}
+
+/* Smaller Generously-Spaced Deep Navy Labels */
+.countdown-open-label {
+  font-family: 'Space Grotesk', 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #061124;
+  margin-top: 0.85rem;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .countdown-open-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    margin-top: 0.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .countdown-open-label {
+    font-size: 0.55rem;
+    letter-spacing: 0.1em;
+    margin-top: 0.35rem;
+  }
+}
+
+/* ==========================================================================
+   AMENITIES STRIP (SOLID DARK NAVY WITH GOLD ACCENTS)
+   ========================================================================== */
+.amenities-strip {
+  background: #040917;
+  padding: 3.5rem 1rem;
+  position: relative;
+  border-bottom: 1px solid var(--navy-border);
+}
+
+.amenity-card {
+  background: rgba(8, 18, 38, 0.75);
+  border: 1px solid rgba(212, 175, 55, 0.18);
+  border-radius: 0.875rem;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.amenity-card:hover {
+  background: rgba(11, 24, 51, 0.9);
+  border-color: var(--gold-metallic);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 0 12px rgba(212, 175, 55, 0.12);
+}
+
+.amenity-icon-wrapper {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(212, 175, 55, 0.08);
+  border: 1px solid var(--gold-metallic);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.85rem;
+  color: var(--gold-light);
+  transition: all 0.3s ease;
+}
+
+.amenity-card:hover .amenity-icon-wrapper {
+  transform: scale(1.08);
+  background: var(--grad-gold-foil);
+  color: #030712;
+}
+
+/* ==========================================================================
+   CAR SHOWCASE ("TWO LUCKY WINNERS. TWO DREAM CARS.")
+   Solid dark background with pure CSS lighting. NO background images.
+   ========================================================================== */
+.car-showcase-section {
+  position: relative;
+  background: #02050e;
+  background-image: radial-gradient(circle at 50% 40%, rgba(212, 175, 55, 0.07) 0%, transparent 65%);
+  overflow: hidden;
+  padding: 6rem 1rem;
+  border-top: 1px solid var(--navy-border);
+  border-bottom: 1px solid var(--navy-border);
+}
+
+#car-confetti-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* ==========================================================================
+   RESPONSIVENESS & ACCESSIBILITY
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .hero-car-img-wrapper {
+    height: 280px;
+  }
+  .car-plot-label {
+    padding: 0.5rem 1rem;
+  }
+  .car-plot-label .plot-text {
+    font-size: 0.8rem;
+  }
+  .car-plot-label .car-model {
+    font-size: 0.78rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-cars-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .hero-car-img-wrapper {
+    height: 240px;
+    max-width: 480px;
+  }
+  .hero-car-item {
+    width: 100%;
+  }
+  .car-plot-label {
+    margin-top: -6px;
+  }
+  .hero-cars-platform-line {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-car-img-wrapper {
+    height: 190px;
+  }
+  .countdown-box {
+    padding: 1.25rem 0.5rem;
+  }
+}
+
+/* Respect Reduced Motion Preferences */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .cyber-scanline {
+    display: none !important;
+  }
+  #car-confetti-canvas {
+    display: none !important;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: #0d2042;
+  border-radius: 4px;
+  border: 1px solid var(--gold-metallic);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-metallic);
+}
+
+/* ==========================================================================
+   MOBILE-FIRST INTERACTIVE SITE PLAN VIEWER (CRITICAL FULL-SCREEN MODULE)
+   ========================================================================== */
+#siteplan-viewer-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background-color: #02050E;
+  touch-action: none;
+  -webkit-touch-callout: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+#siteplan-viewport {
+  touch-action: none;
+  -webkit-touch-callout: none;
+  user-select: none;
+  -webkit-user-select: none;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#siteplan-stage {
+  will-change: transform;
+  transform-origin: center center;
+  touch-action: none;
+}
+
+#siteplan-full-img {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: high-quality;
+  max-width: none !important;
+  max-height: none !important;
+  display: block;
+}
+
+/* Prevent iOS Safari 16px auto-zoom on input focus */
+@media (max-width: 768px) {
+  input, select, textarea {
+    font-size: 16px !important;
+  }
+}
+
+/* Ultra-Compact Mobile Screen Tuning (320px - 380px Viewports) */
+@media (max-width: 380px) {
+  .countdown-open-numbers {
+    height: 42px;
+  }
+  .odometer-digit-col {
+    width: 20px;
+  }
+  .odometer-digit-item {
+    height: 42px;
+    line-height: 42px;
+    font-size: 1.65rem;
+  }
+  .countdown-open-separator {
+    height: 42px;
+    line-height: 38px;
+    font-size: 1.3rem;
+    padding: 0;
+  }
+  .countdown-open-label {
+    font-size: 0.52rem;
+    letter-spacing: 0.08em;
+    margin-top: 0.25rem;
+  }
+  .countdown-open-strip {
+    gap: 0.15rem;
+  }
+  .hero-car-img-wrapper {
+    height: 175px;
+  }
+  .car-plot-label {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.72rem;
+  }
+  .car-plot-label .plot-text {
+    font-size: 0.75rem;
+  }
+  .car-plot-label .car-model {
+    font-size: 0.72rem;
+  }
+}
+
+/* Safe Touch Target Standard (Min 44px) */
+.btn-gold, .btn-navy, button, .mobile-nav-link {
+  min-height: 44px;
+}
+
