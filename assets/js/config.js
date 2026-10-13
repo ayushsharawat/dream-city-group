@@ -15,8 +15,8 @@ const SITE_CONFIG = {
     tagline: "Building Trust, Crafting Dreams",
     role: "Property Dealer & Residential Plot Developer",
     // Official Logo PNG
-    logoImage: "assets/images/logo_crest.png",
-    logoImageAlt: "assets/images/logo/dream-city-group.png",
+    logoImage: "/assets/images/logo_crest.png",
+    logoImageAlt: "/assets/images/logo/dream-city-group.png",
     established: "Shamli, UP",
   },
 
@@ -40,9 +40,9 @@ const SITE_CONFIG = {
       plotBadge: "PLOT NO. 121 — HYUNDAI CRETA",
       plotNumber: "PLOT NO. 121",
       modelName: "HYUNDAI CRETA",
-      image: "assets/images/hyundai_creta.png",
-      altImage: "assets/images/vehicles/hyundai-creta.png",
-      rawFallback: "assets/images/hyundai_creta_raw.jpg",
+      image: "/assets/images/hyundai_creta.png",
+      altImage: "/assets/images/vehicles/hyundai-creta.png",
+      rawFallback: "/assets/images/hyundai_creta_raw.jpg",
       tagline: "The Undisputed Luxury SUV",
       badgeGold: true,
       specs: [
@@ -55,10 +55,10 @@ const SITE_CONFIG = {
       plotBadge: "PLOT NO. 201 — MAHINDRA XUV 7XO",
       plotNumber: "PLOT NO. 201",
       modelName: "MAHINDRA XUV 7XO",
-      image: "assets/images/mahindra_xuv_7xo.png",
-      altImage: "assets/images/vehicles/mahindra-xuv-7xo.png",
-      fallbackImage: "assets/images/mahindra_xuv700.png",
-      rawFallback: "assets/images/mahindra_xuv_raw.jpg",
+      image: "/assets/images/mahindra_xuv_7xo.png",
+      altImage: "/assets/images/vehicles/mahindra-xuv-7xo.png",
+      fallbackImage: "/assets/images/mahindra_xuv700.png",
+      rawFallback: "/assets/images/mahindra_xuv_raw.jpg",
       tagline: "The Dominant Flagship Beast",
       badgeGold: true,
       specs: [
@@ -140,8 +140,8 @@ const SITE_CONFIG = {
     name: "DREAM RESIDENCY",
     developer: "DREAM CITY GROUP, SHAMLI",
     tagline: "The Pinnacle of Modern Township Living in Shamli",
-    heroImage: "assets/images/dream_residency_gate.jpg",
-    masterplanImage: "assets/images/dream_residency_plots.jpg",
+    heroImage: "/assets/images/dream_residency_gate.jpg",
+    masterplanImage: "/assets/images/dream_residency_plots.jpg",
     location: "Prime Strategic Corridor, Shamli, Uttar Pradesh",
     googleMapsUrl: "https://maps.google.com/?q=Shamli,+Uttar+Pradesh",
     overview: "Dream Residency is a landmark residential plotted development thoughtfully designed by Dream City Group. Situated in the rapidly flourishing heart of Shamli, Uttar Pradesh, it blends peaceful suburban greenery with ultra-modern township infrastructure.",
@@ -167,11 +167,11 @@ const SITE_CONFIG = {
       isFeatured: true,
       location: "Shamli, Uttar Pradesh",
       googleMapsUrl: "https://maps.google.com/?q=Shamli,+Uttar+Pradesh",
-      image: "assets/images/projects/dream-residency/cover.jpg",
-      fallbackImage: "assets/images/dream_residency_gate.jpg",
+      image: "/assets/images/projects/dream-residency/cover.jpg",
+      fallbackImage: "/assets/images/dream_residency_gate.jpg",
       gallery: [
-        "assets/images/dream_residency_gate.jpg",
-        "assets/images/dream_residency_plots.jpg"
+        "/assets/images/dream_residency_gate.jpg",
+        "/assets/images/dream_residency_plots.jpg"
       ],
       description: "Our premier grand-opening plotted development in Shamli featuring wide 40ft asphalt roads, grand entrance arch, sweet water, and dream car allotments.",
       amenities: ["Residential Plots", "40ft Wide Roads", "24x7 Security", "Parks & Mandir"]
@@ -184,10 +184,10 @@ const SITE_CONFIG = {
       isFeatured: false,
       location: "Shamli, Uttar Pradesh",
       googleMapsUrl: "https://maps.google.com/?q=Shamli,+Uttar+Pradesh",
-      image: "assets/images/projects/dream-city-colony-shamli/cover.jpg",
-      fallbackImage: "assets/images/dream_residency_plots.jpg",
+      image: "/assets/images/projects/dream-city-colony-shamli/cover.jpg",
+      fallbackImage: "/assets/images/dream_residency_plots.jpg",
       gallery: [
-        "assets/images/projects/dream-city-colony-shamli/cover.jpg"
+        "/assets/images/projects/dream-city-colony-shamli/cover.jpg"
       ],
       description: "A well-established residential colony delivered by Dream City Group in Shamli with completed paved avenues, street lighting, and thriving family homes.",
       amenities: ["Freehold Plots", "Paved Roads", "Sweet Water", "Street Lights"]
@@ -200,10 +200,10 @@ const SITE_CONFIG = {
       isFeatured: false,
       location: "Shamli, Uttar Pradesh",
       googleMapsUrl: "https://maps.google.com/?q=Shamli,+Uttar+Pradesh",
-      image: "assets/images/projects/dream-city-phase-2-shamli/cover.jpg",
-      fallbackImage: "assets/images/dream_residency_plots.jpg",
+      image: "/assets/images/projects/dream-city-phase-2-shamli/cover.jpg",
+      fallbackImage: "/assets/images/dream_residency_plots.jpg",
       gallery: [
-        "assets/images/projects/dream-city-phase-2-shamli/cover.jpg"
+        "/assets/images/projects/dream-city-phase-2-shamli/cover.jpg"
       ],
       description: "Phase II residential plotted expansion in Shamli with demarcated freehold plots, boundary walls, underground drainage, and immediate registry.",
       amenities: ["Demarcated Plots", "30ft Roads", "Gated Security", "Underground Drainage"]
@@ -216,10 +216,10 @@ const SITE_CONFIG = {
       isFeatured: false,
       location: "Shamli, Uttar Pradesh",
       googleMapsUrl: "https://maps.google.com/?q=Shamli,+Uttar+Pradesh",
-      image: "assets/images/projects/alpha-city-shamli/cover.jpg",
-      fallbackImage: "assets/images/dream_residency_gate.jpg",
+      image: "/assets/images/projects/alpha-city-shamli/cover.jpg",
+      fallbackImage: "/assets/images/dream_residency_gate.jpg",
       gallery: [
-        "assets/images/projects/alpha-city-shamli/cover.jpg"
+        "/assets/images/projects/alpha-city-shamli/cover.jpg"
       ],
       description: "A prime plotted layout situated close to key Shamli municipal avenues, designed with landscaped green pockets and modern access infrastructure.",
       amenities: ["Prime Location", "Wide Boulevard", "Lush Green Parks", "24x7 Security"]
@@ -232,10 +232,10 @@ const SITE_CONFIG = {
       isFeatured: false,
       location: "Baraut, Uttar Pradesh",
       googleMapsUrl: "https://maps.google.com/?q=Baraut,+Uttar+Pradesh",
-      image: "assets/images/projects/dream-city-baraut/cover.jpg",
-      fallbackImage: "assets/images/dream_residency_plots.jpg",
+      image: "/assets/images/projects/dream-city-baraut/cover.jpg",
+      fallbackImage: "/assets/images/dream_residency_plots.jpg",
       gallery: [
-        "assets/images/projects/dream-city-baraut/cover.jpg"
+        "/assets/images/projects/dream-city-baraut/cover.jpg"
       ],
       description: "Strategic plotted residential township connecting Baraut with regional corridors, offering peaceful suburban living and freehold plot options.",
       amenities: ["Highway Proximity", "Wide Roads", "Sweet Water", "Open Green Zone"]
@@ -248,10 +248,10 @@ const SITE_CONFIG = {
       isFeatured: false,
       location: "Meerut, Uttar Pradesh",
       googleMapsUrl: "https://maps.google.com/?q=Meerut,+Uttar+Pradesh",
-      image: "assets/images/projects/dream-city-meerut/cover.jpg",
-      fallbackImage: "assets/images/dream_residency_gate.jpg",
+      image: "/assets/images/projects/dream-city-meerut/cover.jpg",
+      fallbackImage: "/assets/images/dream_residency_gate.jpg",
       gallery: [
-        "assets/images/projects/dream-city-meerut/cover.jpg"
+        "/assets/images/projects/dream-city-meerut/cover.jpg"
       ],
       description: "High-potential residential plotted development in the booming Meerut transit sector, providing prime plots for luxury home building.",
       amenities: ["Transit Corridor", "Wide Access Road", "Demarcated Plots", "Secured Layout"]

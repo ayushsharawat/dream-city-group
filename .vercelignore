@@ -1,0 +1,10 @@
+# Local development server and test scripts (prevent Vercel Node.js server auto-detection)
+server.js
+test_site.js
+test_mobile.js
+
+# OS & Editor files
+.DS_Store
+.DS_Store?
+._*
+*.log

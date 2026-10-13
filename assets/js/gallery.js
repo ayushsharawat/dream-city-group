@@ -20,7 +20,7 @@
     container.innerHTML = projects
       .map((proj, index) => {
         const isFeatured = proj.isFeatured || index === 0;
-        const fallbackImg = proj.fallbackImage || "assets/images/dream_residency_plots.jpg";
+        const fallbackImg = proj.fallbackImage || "/assets/images/dream_residency_plots.jpg";
         const gridColClass = isFeatured ? "md:col-span-2 lg:col-span-3" : "col-span-1";
 
         return `
@@ -139,7 +139,7 @@
 
     if (!modal || !title || !body) return;
 
-    const fallbackImg = proj.fallbackImage || "assets/images/dream_residency_plots.jpg";
+    const fallbackImg = proj.fallbackImage || "/assets/images/dream_residency_plots.jpg";
     title.textContent = proj.name;
     body.innerHTML = `
       <div class="space-y-6">
@@ -196,6 +196,10 @@
 
     modal.classList.remove("hidden");
     modal.classList.add("flex");
+  };
+
+  window.openDreamResidencyModal = function () {
+    window.openProjectModal("dream-residency");
   };
 
   window.closeProjectModal = function () {

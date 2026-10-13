@@ -1,6 +1,15 @@
 {
   "version": 2,
+  "framework": null,
+  "buildCommand": null,
+  "outputDirectory": ".",
   "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/images/:path*",
+      "destination": "/assets/images/:path*"
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",

@@ -90,7 +90,7 @@
 
       if (mode === "blue") {
         if (img) {
-          img.src = "assets/images/blueprint_dreamcityResidency.png";
+          img.src = "/assets/images/blueprint_dreamcityResidency.png";
           img.style.filter = "contrast(1.05) brightness(1.02)";
           img.style.objectFit = "contain";
           img.style.backgroundColor = "#020713";
@@ -101,7 +101,7 @@
         btnArch?.classList.add("bg-navy-900", "text-gold-champagne");
       } else {
         if (img) {
-          img.src = "assets/images/dream_residency_plots.jpg";
+          img.src = "/assets/images/dream_residency_plots.jpg";
           img.style.filter = "brightness(0.95)";
           img.style.objectFit = "cover";
           img.style.backgroundColor = "transparent";
