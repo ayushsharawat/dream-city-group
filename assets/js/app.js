@@ -169,9 +169,109 @@
     });
   }
 
+  // Interactive Plot & Allotment Calculator
+  function initPlotCalculator() {
+    const sizeBtns = document.querySelectorAll(".plot-size-btn");
+    const displayArea = document.getElementById("calc-display-area");
+    const displayToken = document.getElementById("calc-display-token");
+    const displayEmi = document.getElementById("calc-display-emi");
+    const whatsappBtn = document.getElementById("calc-whatsapp-btn");
+
+    if (!sizeBtns.length) return;
+
+    sizeBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        sizeBtns.forEach((b) => {
+          b.classList.remove("active", "border-gold-metallic/40", "text-white");
+          b.classList.add("border-white/20", "text-slate-300");
+        });
+        btn.classList.add("active", "border-gold-metallic/40");
+        btn.classList.remove("border-white/20", "text-slate-300");
+
+        const size = btn.getAttribute("data-size") || "100";
+        const sqft = btn.getAttribute("data-sqft") || "900";
+        const token = btn.getAttribute("data-token") || "51,000";
+        const emi = btn.getAttribute("data-emi") || "18,500";
+
+        if (displayArea) displayArea.textContent = `${size} Sq. Yds (${sqft} Sq. Ft)`;
+        if (displayToken) displayToken.textContent = `₹${token}`;
+        if (displayEmi) displayEmi.textContent = `₹${emi} / mo*`;
+
+        if (whatsappBtn) {
+          const text = encodeURIComponent(
+            `Hello Dream City Group, I am interested in a ${size} Sq Yds (${sqft} Sq. Ft) plot in Dream Residency Shamli. Please share allotment details and booking procedure.`
+          );
+          whatsappBtn.href = `https://wa.me/918218553028?text=${text}`;
+        }
+
+        if (window.playFuturisticChime) {
+          window.playFuturisticChime(660, 0.12);
+        }
+      });
+    });
+  }
+
+  // Back to Top Button Controller
+  function initBackToTop() {
+    const btn = document.getElementById("back-to-top-btn");
+    if (!btn) return;
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 350) {
+        btn.classList.add("visible");
+      } else {
+        btn.classList.remove("visible");
+      }
+    }, { passive: true });
+  }
+
+  // Active Navigation Scroll Spy
+  function initScrollSpy() {
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll("nav a.nav-link");
+
+    if (!sections.length || !navLinks.length) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute("id");
+            navLinks.forEach((link) => {
+              if (link.getAttribute("href") === `#${id}`) {
+                link.classList.add("active");
+              } else {
+                link.classList.remove("active");
+              }
+            });
+          }
+        });
+      },
+      { rootMargin: "-20% 0px -70% 0px" }
+    );
+
+    sections.forEach((s) => observer.observe(s));
+  }
+
+  // FAQ Accordion Interaction
+  function initFaqAccordion() {
+    const faqItems = document.querySelectorAll(".faq-item");
+    faqItems.forEach((item) => {
+      item.addEventListener("toggle", () => {
+        if (item.open && window.playFuturisticChime) {
+          window.playFuturisticChime(720, 0.1);
+        }
+      });
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", () => {
     initNav();
     initConfigModal();
     initSmoothScroll();
+    initPlotCalculator();
+    initBackToTop();
+    initScrollSpy();
+    initFaqAccordion();
   });
 })();

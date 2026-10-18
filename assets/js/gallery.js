@@ -10,12 +10,20 @@
  */
 
 (function () {
+  let activeFilter = "all";
+
   function renderProjects() {
     const container = document.getElementById("projects-grid");
     if (!container) return;
 
-    const projects = window.SITE_CONFIG?.otherProjects || [];
+    let projects = window.SITE_CONFIG?.otherProjects || [];
     if (!projects.length) return;
+
+    if (activeFilter === "flagship") {
+      projects = projects.filter((p) => p.isFeatured || p.id === "dream-residency");
+    } else if (activeFilter === "delivered") {
+      projects = projects.filter((p) => !p.isFeatured && p.id !== "dream-residency");
+    }
 
     container.innerHTML = projects
       .map((proj, index) => {
@@ -210,9 +218,36 @@
     }
   };
 
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", renderProjects);
-  } else {
+  function initFilters() {
+    const filterBtns = document.querySelectorAll(".project-filter-btn");
+    filterBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const filter = btn.getAttribute("data-filter") || "all";
+        activeFilter = filter;
+        filterBtns.forEach((b) => {
+          b.classList.remove("active", "text-gold-light", "bg-navy-950", "border-gold-metallic/40");
+          b.classList.add("bg-navy-950/80", "border-white/15", "text-slate-300");
+        });
+        btn.classList.add("active", "text-gold-light", "bg-navy-950", "border-gold-metallic/40");
+        btn.classList.remove("bg-navy-950/80", "border-white/15", "text-slate-300");
+
+        if (window.playFuturisticChime) {
+          window.playFuturisticChime(800, 0.12);
+        }
+
+        renderProjects();
+      });
+    });
+  }
+
+  function initGallery() {
     renderProjects();
+    initFilters();
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initGallery);
+  } else {
+    initGallery();
   }
 })();

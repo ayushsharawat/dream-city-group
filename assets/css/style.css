@@ -26,6 +26,30 @@
   --grad-gold-text: linear-gradient(180deg, #FFFFFF 0%, #FFF2B2 25%, #E5BE4A 60%, #996818 100%);
   --grad-gold-border: linear-gradient(135deg, rgba(255, 223, 115, 0.8), rgba(212, 175, 55, 0.3), rgba(255, 245, 192, 0.7));
   --grad-hero-css-light: radial-gradient(ellipse 70% 50% at 50% 15%, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
+
+  /* Modern Web Guidance: Explicit Color Interpolation Tokens */
+  --in-oklab: ;
+  --in-oklch: ;
+}
+
+@supports (linear-gradient(in oklab, white, black)) {
+  :root {
+    --in-oklab: in oklab;
+    --in-oklch: in oklch;
+  }
+}
+
+/* Accessible Motion Handling per Modern Web Guidance */
+@property --animation-reduced {
+  syntax: "*";
+  inherits: false;
+  initial-value: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: var(--animation-reduced) !important;
+  }
 }
 
 /* Reset & Base */
@@ -1044,6 +1068,176 @@ body {
 /* Safe Touch Target Standard (Min 44px) */
 .btn-gold, .btn-navy, button, .mobile-nav-link {
   min-height: 44px;
+}
+
+/* ==========================================================================
+   CINEMATIC VISUAL EFFECTS & INTERACTIVE MODULES
+   ========================================================================== */
+
+/* Animated Showroom Platform Beam */
+@keyframes platformBeamPulse {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scaleX(0.96);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleX(1);
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.7);
+  }
+}
+.hero-cars-platform-line {
+  animation: platformBeamPulse 5s infinite ease-in-out;
+}
+
+/* Radar Sweep Line over Masterplan */
+@keyframes radarSweepVertical {
+  0% {
+    top: -5%;
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.9;
+  }
+  85% {
+    opacity: 0.9;
+  }
+  100% {
+    top: 105%;
+    opacity: 0;
+  }
+}
+.blueprint-radar-sweep {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(255, 223, 115, 0.9), transparent);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.9);
+  pointer-events: none;
+  z-index: 15;
+  animation: radarSweepVertical 4s infinite linear;
+}
+
+/* Interactive Plot Calculator Styles */
+.plot-size-btn {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  min-height: 44px;
+  cursor: pointer;
+}
+.plot-size-btn.active {
+  background: linear-gradient(135deg, #FFF8D6, #D4AF37);
+  color: #030712 !important;
+  font-weight: 800;
+  border-color: #FFF8D6;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+}
+.payment-plan-btn {
+  transition: all 0.25s ease;
+  min-height: 40px;
+  cursor: pointer;
+}
+.payment-plan-btn.active {
+  background: rgba(212, 175, 55, 0.2);
+  color: #FFDF73 !important;
+  border-color: rgba(212, 175, 55, 0.6);
+}
+
+/* FAQ Accordion Transitions */
+.faq-item {
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+.faq-item[open] {
+  border-color: rgba(212, 175, 55, 0.6);
+  background-color: rgba(8, 18, 38, 0.95);
+}
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+}
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+.faq-chevron {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.faq-item[open] .faq-chevron {
+  transform: rotate(180deg);
+  color: var(--gold-light);
+}
+
+/* Project Filter Tabs */
+.project-filter-btn {
+  transition: all 0.3s ease;
+  min-height: 40px;
+  cursor: pointer;
+}
+.project-filter-btn.active {
+  background: var(--grad-gold-foil);
+  color: #030712 !important;
+  border-color: #FFF8D6;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+/* Floating Back to Top Button */
+#back-to-top-btn {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  z-index: 45;
+  width: 44px;
+  height: 44px;
+  border-radius: 9999px;
+  background: rgba(8, 18, 38, 0.9);
+  border: 1px solid rgba(212, 175, 55, 0.5);
+  color: var(--gold-light);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+}
+#back-to-top-btn.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+#back-to-top-btn:hover {
+  background: var(--grad-gold-foil);
+  color: #030712;
+  border-color: #FFF8D6;
+  box-shadow: 0 6px 25px rgba(212, 175, 55, 0.5);
+  transform: translateY(-3px);
+}
+@media (min-width: 640px) {
+  #back-to-top-btn {
+    bottom: 28px;
+    right: 28px;
+    width: 48px;
+    height: 48px;
+  }
+}
+
+/* Active Navigation Item Highlight */
+.nav-link.active {
+  color: var(--gold-light) !important;
+  position: relative;
+}
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--gold-metallic);
+  border-radius: 2px;
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.8);
 }
 
 

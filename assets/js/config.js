@@ -48,7 +48,8 @@ const SITE_CONFIG = {
       specs: [
         { label: "Segment", value: "Premium Compact SUV" },
         { label: "Features", value: "Panoramic Sunroof & ADAS" },
-        { label: "Edition", value: "Pearl White Showroom Finish" }
+        { label: "Edition", value: "Pearl White Showroom Finish" },
+        { label: "Grand Opening Draw", value: "Allottee Prize for Plot 121" }
       ]
     },
     car2: {
@@ -64,7 +65,8 @@ const SITE_CONFIG = {
       specs: [
         { label: "Segment", value: "Flagship Luxury SUV" },
         { label: "Features", value: "Twin HD Displays & Skyroof" },
-        { label: "Edition", value: "Midnight Navy Metallic" }
+        { label: "Edition", value: "Midnight Navy Metallic" },
+        { label: "Grand Opening Draw", value: "Allottee Prize for Plot 201" }
       ]
     },
     showcaseHeadline: "TWO LUCKY WINNERS. TWO DREAM CARS.",
