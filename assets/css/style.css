@@ -1,31 +1,55 @@
 /* ==========================================================================
-   DREAM CITY GROUP, SHAMLI - STYLESHEET (CLEAN SOLID-COLOR FUTURISTIC 2026 THEME)
-   Zero background images. Solid midnight navy, obsidian black, metallic gold.
-   Pure CSS lighting, thin gold borders, and modern architectural depth.
+   DREAM CITY GROUP, SHAMLI — DESIGN SYSTEM & ARCHITECTURAL STYLESHEET
+   Refined luxury real-estate brand aesthetic: Warm ivory, surface white,
+   deep charcoal, muted slate, dark navy, and restrained champagne gold.
+   Zero photo backgrounds. Modern typography, balanced spacing, and clean depth.
    ========================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
 
 :root {
-  /* Midnight Navy & Obsidian Palette */
-  --bg-dark: #030712;
-  --bg-navy: #050b1a;
-  --bg-navy-card: #081226;
-  --bg-surface: #0b1833;
-  --navy-border: rgba(212, 175, 55, 0.15);
+  /* Editorial Palette: Warm Ivory & Surface Whites */
+  --bg-page: #FAF8F3;
+  --bg-surface: #FFFFFF;
+  --bg-surface-elevated: #FDFBF7;
+  --bg-warm-tint: #F3EFE6;
+  --bg-warm-subtle: #FAF6EE;
 
-  /* Metallic Gold Palette */
-  --gold-highlight: #FFF8D6;
-  --gold-light: #FFDF73;
-  --gold-metallic: #D4AF37;
-  --gold-bronze: #AA771C;
-  --gold-champagne: #F3E5AB;
+  /* Typography Colors: Deep Charcoal & Slate */
+  --text-primary: #171C26;
+  --text-secondary: #5A6578;
+  --text-muted: #8A94A6;
 
-  /* Gradients (CSS-Only, No Images) */
-  --grad-gold-foil: linear-gradient(135deg, #FFF9D2 0%, #F5DF8E 20%, #D4AF37 50%, #FFF0AA 70%, #996A19 100%);
-  --grad-gold-text: linear-gradient(180deg, #FFFFFF 0%, #FFF2B2 25%, #E5BE4A 60%, #996818 100%);
-  --grad-gold-border: linear-gradient(135deg, rgba(255, 223, 115, 0.6), rgba(212, 175, 55, 0.25), rgba(255, 245, 192, 0.5));
-  --grad-hero-css-light: radial-gradient(ellipse 70% 50% at 50% 15%, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
+  /* Architectural Dark Navy */
+  --navy-dark: #101827;
+  --navy-surface: #1E293B;
+  --navy-deep: #0B111E;
+
+  /* Restrained Champagne Accent (Subtle, elegant, non-gaudy) */
+  --champagne-accent: #C5A45D;
+  --champagne-light: #DFCA9A;
+  --champagne-dark: #8C6D2D;
+  --champagne-subtle: rgba(197, 164, 93, 0.12);
+
+  /* Subtle Warm Architectural Borders */
+  --border-subtle: #E8E3D8;
+  --border-divider: #ECE7DC;
+  --border-champagne: rgba(197, 164, 93, 0.35);
+
+  /* Legacy compatibility variables */
+  --bg-dark: #FAF8F3;
+  --bg-navy: #FAF8F3;
+  --bg-navy-card: #FFFFFF;
+  --navy-border: #E8E3D8;
+  --gold-metallic: #C5A45D;
+  --gold-light: #DFCA9A;
+  --gold-highlight: #FAF6EE;
+  --gold-bronze: #8C6D2D;
+  --gold-champagne: #DFCA9A;
+  --grad-gold-foil: linear-gradient(135deg, #DFCA9A 0%, #C5A45D 100%);
+  --grad-gold-text: #171C26;
+  --grad-gold-border: rgba(197, 164, 93, 0.4);
+  --grad-hero-css-light: radial-gradient(ellipse 70% 50% at 50% 10%, rgba(255, 255, 255, 0.8) 0%, transparent 70%);
 
   /* Modern Web Guidance: Explicit Color Interpolation Tokens */
   --in-oklab: ;
@@ -52,7 +76,7 @@
   }
 }
 
-/* Reset & Base */
+/* Reset & Base Standards */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -61,22 +85,23 @@
 
 html {
   scroll-behavior: smooth;
-  font-family: 'Manrope', Arial, sans-serif !important;
-  background-color: var(--bg-dark);
-  color: #F8FAFC;
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, Arial, sans-serif !important;
+  background-color: var(--bg-page);
+  color: var(--text-primary);
   letter-spacing: -0.015em;
 }
 
 body {
   overflow-x: hidden;
-  background-color: var(--bg-dark);
+  background-color: var(--bg-page);
+  color: var(--text-primary);
   line-height: 1.6;
-  font-family: 'Manrope', Arial, sans-serif !important;
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, Arial, sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Typography Classes - Universal Unification to Manrope (Modern Sans-Serif) */
+/* Typography Classes — Universal System-Wide Unification to Manrope */
 .font-cinzel,
 .font-jakarta,
 .font-playfair,
@@ -84,44 +109,42 @@ body {
 .font-orbitron,
 .font-space,
 .font-manrope {
-  font-family: 'Manrope', Arial, sans-serif !important;
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, Arial, sans-serif !important;
 }
 
-/* Refined Champagne Gold Text Effect (Smooth metallic finish, no harsh drop shadows) */
+/* Text utility classes */
 .text-gold-3d {
-  background: linear-gradient(135deg, #E6CA85 0%, #D4AF37 40%, #AA771C 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--text-primary);
+  -webkit-text-fill-color: var(--text-primary);
+  background: none;
   filter: none;
   text-shadow: none;
 }
 
 .text-gold-metallic {
-  color: var(--gold-metallic);
+  color: var(--champagne-dark);
 }
 
 .text-gold-light {
-  color: var(--gold-light);
+  color: var(--champagne-dark);
 }
 
 .text-gold-champagne {
-  color: var(--gold-champagne);
+  color: var(--champagne-accent);
 }
 
-/* Subtle Geometric Architectural CSS Pattern (CSS-Only, No Images) */
+/* Subtle Geometric Architectural Pattern (CSS-Only, No Images) */
 .cyber-grid {
   background-image: 
-    linear-gradient(to right, rgba(212, 175, 55, 0.025) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(212, 175, 55, 0.025) 1px, transparent 1px);
+    linear-gradient(to right, rgba(23, 28, 38, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(23, 28, 38, 0.03) 1px, transparent 1px);
   background-size: 60px 60px;
 }
 
-/* Clean Scanline Accent (Subtle, suppressed in luxury mode) */
 .cyber-scanline {
   display: none !important;
 }
 
-/* HUD Corner Brackets suppressed for clean luxury architectural aesthetic */
 .hud-corner-tl,
 .hud-corner-tr,
 .hud-corner-bl,
@@ -129,7 +152,9 @@ body {
   display: none !important;
 }
 
-/* Buttons */
+/* ==========================================================================
+   BUTTONS & CALLS TO ACTION (EDITORIAL REAL-ESTATE DESIGN)
+   ========================================================================== */
 .btn-gold {
   position: relative;
   display: inline-flex;
@@ -139,38 +164,29 @@ body {
   font-family: 'Manrope', Arial, sans-serif;
   font-weight: 700;
   font-size: 0.8125rem;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: #061124;
-  background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 55%, #B8860B 100%);
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #FFFFFF !important;
+  background: var(--navy-dark) !important;
+  border: 1px solid var(--navy-dark);
   border-radius: 9999px;
   overflow: hidden;
-  box-shadow: 0 4px 14px rgba(212, 175, 55, 0.22);
-  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(16, 24, 39, 0.12);
+  transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   text-decoration: none;
 }
 
-.btn-gold::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-  transition: 0.5s;
-}
-
 .btn-gold:hover {
+  background: var(--navy-surface) !important;
+  border-color: var(--navy-surface);
+  color: #FFFFFF !important;
   transform: translateY(-1.5px);
-  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.35);
-  color: #030712;
+  box-shadow: 0 6px 18px rgba(16, 24, 39, 0.18);
 }
 
-.btn-gold:hover::after {
-  left: 100%;
+.btn-gold::after {
+  display: none !important;
 }
 
 .btn-navy {
@@ -181,53 +197,53 @@ body {
   font-family: 'Manrope', Arial, sans-serif;
   font-weight: 600;
   font-size: 0.8125rem;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #F8FAFC;
-  background: #0B162C;
-  border: 1px solid rgba(212, 175, 55, 0.35);
+  color: var(--text-primary);
+  background: #FFFFFF;
+  border: 1px solid var(--border-subtle);
   border-radius: 9999px;
-  backdrop-filter: blur(8px);
-  transition: all 0.25s ease;
+  transition: all 0.22s ease;
   cursor: pointer;
   text-decoration: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
 .btn-navy:hover {
-  background: #102142;
-  border-color: #D4AF37;
-  color: #FFFFFF;
+  background: var(--bg-warm-tint);
+  border-color: var(--champagne-accent);
+  color: var(--navy-dark);
   transform: translateY(-1.5px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 14px rgba(16, 24, 39, 0.08);
 }
 
-/* Header Enquiry Button (Refined Dark Navy with White Text) */
+/* Header Enquiry Button (Crisp Dark Navy Pill) */
 .btn-navy-header {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.65rem 1.4rem;
+  padding: 0.625rem 1.35rem;
   font-family: 'Manrope', Arial, sans-serif;
   font-weight: 700;
   font-size: 0.8125rem;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #FFFFFF !important;
-  background: #091730 !important;
-  border: 1px solid #091730 !important;
+  background: var(--navy-dark) !important;
+  border: 1px solid var(--navy-dark) !important;
   border-radius: 9999px;
   transition: all 0.2s ease;
   cursor: pointer;
   text-decoration: none;
-  box-shadow: 0 2px 8px rgba(9, 23, 48, 0.12);
+  box-shadow: 0 2px 6px rgba(16, 24, 39, 0.12);
 }
 
 .btn-navy-header:hover {
-  background: #142F5E !important;
-  border-color: #142F5E !important;
+  background: var(--navy-surface) !important;
+  border-color: var(--navy-surface) !important;
   color: #FFFFFF !important;
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(9, 23, 48, 0.22);
+  box-shadow: 0 4px 12px rgba(16, 24, 39, 0.18);
 }
 
 .btn-navy-header::after {
@@ -235,57 +251,90 @@ body {
 }
 
 /* ==========================================================================
-   HERO SECTION (PREMIUM LIGHT CHAMPAGNE & IVORY AESTHETIC)
-   Sophisticated light background with deep navy typography & metallic gold accents.
+   NAVIGATION BAR
+   Solid warm-white / ivory background, dark charcoal links, title case
+   ========================================================================== */
+#main-nav {
+  background-color: #FAF8F5;
+  border-bottom: 1px solid var(--border-subtle);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+}
+
+.nav-link {
+  color: #4A5568;
+  font-family: 'Manrope', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  transition: color 0.18s ease;
+  position: relative;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: var(--navy-dark);
+}
+
+.nav-link.active {
+  color: var(--navy-dark) !important;
+  font-weight: 700;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--navy-dark);
+  border-radius: 2px;
+}
+
+/* ==========================================================================
+   HERO SECTION (WARM IVORY EDITORIAL COMPOSITION)
    ========================================================================== */
 .hero-wrapper {
   position: relative;
   width: 100%;
-  background-color: #FAF8F5;
+  background-color: var(--bg-page);
   background-image: 
-    radial-gradient(ellipse 80% 50% at 50% 0%, #FFFFFF 0%, #FAF6EE 55%, #F3EDE2 100%);
-  color: #061124;
+    radial-gradient(ellipse 70% 45% at 50% 0%, #FFFFFF 0%, var(--bg-page) 75%);
+  color: var(--text-primary);
   overflow: hidden;
   display: flex;
   flex-direction: column;
 }
 
-/* Subtle Golden Lighting Glow */
 .hero-css-glow {
   position: absolute;
-  top: 5%;
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 800px;
+  width: 900px;
   max-width: 95vw;
-  height: 380px;
-  background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.12) 0%, rgba(255, 235, 170, 0.05) 50%, transparent 70%);
-  filter: blur(50px);
+  height: 400px;
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.8) 0%, rgba(243, 239, 230, 0.4) 50%, transparent 75%);
   pointer-events: none;
 }
 
-/* ==========================================================================
-   DOMINANT HERO CARS ON CLEAN LUXURY CSS SHOWROOM PLATFORM
-   Side-by-side, large, realistic ground shadows on elegant light ground
-   ========================================================================== */
+/* Hero Cars Stage */
 .hero-cars-stage {
   position: relative;
   width: 100%;
-  max-width: 1400px;
-  margin: 1rem auto 1.5rem;
+  max-width: 1350px;
+  margin: 1.5rem auto 1.5rem;
   z-index: 20;
   padding: 0 1rem;
 }
 
-/* Elegant CSS Showroom Platform Line */
 .hero-cars-platform-line {
   position: absolute;
-  bottom: 40px;
-  left: 10%;
-  width: 80%;
+  bottom: 38px;
+  left: 12%;
+  width: 76%;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.4) 30%, rgba(212, 175, 55, 0.8) 50%, rgba(212, 175, 55, 0.4) 70%, transparent);
-  box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+  background: linear-gradient(90deg, transparent, rgba(197, 164, 93, 0.35) 25%, rgba(197, 164, 93, 0.6) 50%, rgba(197, 164, 93, 0.35) 75%, transparent);
   pointer-events: none;
 }
 
@@ -302,7 +351,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .hero-car-item:hover {
@@ -312,8 +361,8 @@ body {
 .hero-car-img-wrapper {
   position: relative;
   width: 100%;
-  max-width: 620px;
-  height: 360px;
+  max-width: 600px;
+  height: 350px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -324,127 +373,123 @@ body {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  filter: drop-shadow(0 15px 22px rgba(6, 17, 36, 0.28));
+  filter: drop-shadow(0 16px 20px rgba(16, 24, 39, 0.16));
   transition: filter 0.3s ease;
   user-select: none;
 }
 
-/* Realistic CSS ground shadow under each car */
 .car-ground-shadow {
   position: absolute;
   bottom: 12px;
-  left: 8%;
-  width: 84%;
-  height: 24px;
-  background: radial-gradient(ellipse at center, rgba(6, 17, 36, 0.45) 0%, rgba(6, 17, 36, 0.18) 50%, transparent 75%);
+  left: 10%;
+  width: 80%;
+  height: 22px;
+  background: radial-gradient(ellipse at center, rgba(16, 24, 39, 0.35) 0%, rgba(16, 24, 39, 0.12) 50%, transparent 75%);
   filter: blur(8px);
   z-index: -1;
   pointer-events: none;
 }
 
-/* Subtle gold uplight beneath each car */
 .car-ground-uplight {
   position: absolute;
   bottom: 0px;
   left: 15%;
   width: 70%;
-  height: 20px;
-  background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.18) 0%, transparent 70%);
+  height: 18px;
+  background: radial-gradient(ellipse at center, rgba(197, 164, 93, 0.15) 0%, transparent 70%);
   filter: blur(8px);
   z-index: -2;
   pointer-events: none;
 }
 
-/* Promotional Navy & Gold Car Plot Label */
+/* Promotional Car Plot Badges */
 .car-plot-label {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: #061124;
-  border: 1px solid rgba(212, 175, 55, 0.5);
-  padding: 0.5rem 1.25rem;
+  background: var(--navy-dark);
+  border: 1px solid rgba(197, 164, 93, 0.4);
+  padding: 0.45rem 1.15rem;
   border-radius: 9999px;
-  box-shadow: 0 4px 18px rgba(6, 17, 36, 0.18);
-  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 14px rgba(16, 24, 39, 0.15);
+  backdrop-filter: blur(8px);
   z-index: 25;
-  margin-top: -8px;
-  transition: all 0.25s ease;
+  margin-top: -6px;
+  transition: all 0.22s ease;
 }
 
 .hero-car-item:hover .car-plot-label {
-  border-color: #FFF2B2;
-  box-shadow: 0 6px 22px rgba(212, 175, 55, 0.28);
+  border-color: var(--champagne-light);
+  box-shadow: 0 6px 18px rgba(16, 24, 39, 0.22);
 }
 
 .car-plot-label .plot-text {
   font-family: 'Manrope', Arial, sans-serif;
   font-weight: 700;
-  font-size: 0.825rem;
+  font-size: 0.8125rem;
   letter-spacing: 0.02em;
   color: #FFFFFF;
 }
 
 .car-plot-label .separator {
-  color: var(--gold-metallic);
+  color: var(--champagne-accent);
   font-weight: 600;
-  opacity: 0.8;
 }
 
 .car-plot-label .car-model {
   font-family: 'Manrope', Arial, sans-serif;
   font-weight: 700;
-  font-size: 0.825rem;
+  font-size: 0.8125rem;
   letter-spacing: 0.02em;
-  color: var(--gold-champagne);
+  color: var(--champagne-light);
 }
 
 /* ==========================================================================
-   OPEN HORIZONTAL ROLLING ODOMETER COUNTDOWN
-   Light Champagne, Ivory & White Background with Deep Navy Typography
-   and Borderless Metallic-Gold Numbers in One Continuous Horizontal Line
+   COUNTDOWN SECTION (OPEN HORIZONTAL ROLLING ODOMETER)
+   Warm ivory background, deep charcoal numerals, champagne separators
    ========================================================================== */
 .countdown-section-open {
   position: relative;
-  background-color: #FAF6EE;
+  background-color: var(--bg-page);
   background-image: 
-    radial-gradient(ellipse 85% 55% at 50% 15%, #FFFFFF 0%, #FAF5ED 50%, #F0E6D6 100%);
+    radial-gradient(ellipse 80% 50% at 50% 20%, #FFFFFF 0%, var(--bg-page) 70%);
   padding: 4.5rem 1rem;
   overflow: hidden;
-  border-top: 1px solid rgba(212, 175, 55, 0.45);
-  border-bottom: 1px solid rgba(212, 175, 55, 0.45);
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
 }
 
-/* Subtle CSS-Generated Gold Lighting */
 .countdown-champagne-glow {
   position: absolute;
-  top: 15%;
+  top: 10%;
   left: 50%;
   transform: translateX(-50%);
-  width: 920px;
+  width: 850px;
   max-width: 95vw;
-  height: 380px;
-  background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.16) 0%, rgba(255, 235, 170, 0.08) 45%, transparent 70%);
-  filter: blur(55px);
+  height: 350px;
+  background: radial-gradient(ellipse at center, rgba(197, 164, 93, 0.08) 0%, transparent 70%);
+  filter: blur(50px);
   pointer-events: none;
   z-index: 1;
 }
 
-/* Fine Decorative Architectural Grid Lines */
 .countdown-fine-lines {
   position: absolute;
   inset: 0;
   pointer-events: none;
   background-image: 
-    linear-gradient(90deg, rgba(212, 175, 55, 0.06) 1px, transparent 1px),
-    linear-gradient(180deg, rgba(212, 175, 55, 0.04) 1px, transparent 1px);
+    linear-gradient(90deg, rgba(23, 28, 38, 0.02) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(23, 28, 38, 0.02) 1px, transparent 1px);
   background-size: 80px 80px;
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
-/* Heading in Deep Navy */
 .countdown-open-heading {
-  color: #061124;
-  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+  color: var(--text-primary);
+  font-family: 'Manrope', Arial, sans-serif !important;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
 }
 
 /* Continuous Horizontal Countdown Strip */
@@ -474,7 +519,6 @@ body {
   }
 }
 
-/* Individual Unit (Open, Borderless, Box-Free) */
 .countdown-open-unit {
   display: flex;
   flex-direction: column;
@@ -486,7 +530,6 @@ body {
   box-shadow: none;
 }
 
-/* Numbers Container: Common Baseline with Top/Bottom Vertical Fade Mask */
 .countdown-open-numbers {
   display: flex;
   align-items: baseline;
@@ -513,7 +556,6 @@ body {
   }
 }
 
-/* Individual Digit Column Reel */
 .odometer-digit-col {
   position: relative;
   width: 52px;
@@ -538,25 +580,22 @@ body {
   }
 }
 
-/* Vertical Ribbon Holding Digits */
 .odometer-ribbon {
   display: flex;
   flex-direction: column;
   will-change: transform;
 }
 
-/* Large Elegant Metallic-Gold Digit Item */
 .odometer-digit-item {
   height: 96px;
   line-height: 96px;
-  font-family: 'Manrope', Arial, sans-serif;
+  font-family: 'Manrope', Arial, sans-serif !important;
   font-size: clamp(2.6rem, 6.5vw, 5rem);
   font-weight: 800;
   text-align: center;
-  color: #091730;
-  background: #091730;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: #091730;
+  color: var(--text-primary);
+  background: none;
+  -webkit-text-fill-color: var(--text-primary);
   filter: none;
   user-select: none;
   letter-spacing: -0.03em;
@@ -584,15 +623,15 @@ body {
   }
 }
 
-/* Subtle Gold Colon Separator on Common Baseline */
+/* Restrained Champagne Colon Separator */
 .countdown-open-separator {
-  font-family: 'Manrope', Arial, sans-serif;
+  font-family: 'Manrope', Arial, sans-serif !important;
   font-size: clamp(2rem, 4.5vw, 4rem);
   font-weight: 700;
   height: 96px;
   line-height: 88px;
-  color: #B8860B;
-  opacity: 0.85;
+  color: var(--champagne-accent);
+  opacity: 0.9;
   user-select: none;
   padding: 0 0.25rem;
   display: flex;
@@ -622,14 +661,13 @@ body {
   }
 }
 
-/* Smaller Generously-Spaced Deep Navy Labels */
 .countdown-open-label {
-  font-family: 'Manrope', Arial, sans-serif;
+  font-family: 'Manrope', Arial, sans-serif !important;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: #475569;
+  color: var(--text-secondary);
   margin-top: 0.75rem;
   text-align: center;
 }
@@ -650,67 +688,70 @@ body {
 }
 
 /* ==========================================================================
-   AMENITIES STRIP (SOLID DARK NAVY WITH GOLD ACCENTS)
+   AMENITIES STRIP (CLEAN ARCHITECTURAL SURFACE CARDS)
    ========================================================================== */
 .amenities-strip {
-  background: #040917;
-  padding: 3.5rem 1rem;
+  background: var(--bg-page);
+  padding: 4.5rem 1rem;
   position: relative;
-  border-bottom: 1px solid var(--navy-border);
+  border-bottom: 1px solid var(--border-subtle);
 }
 
 .amenity-card {
-  background: rgba(8, 18, 38, 0.75);
-  border: 1px solid rgba(212, 175, 55, 0.18);
-  border-radius: 0.875rem;
-  padding: 1.5rem 1rem;
+  background: #FFFFFF;
+  border: 1px solid var(--border-subtle);
+  border-radius: 1rem;
+  padding: 1.6rem 1rem;
   text-align: center;
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100%;
+  box-shadow: 0 1px 4px rgba(23, 28, 38, 0.04);
 }
 
 .amenity-card:hover {
-  background: rgba(11, 24, 51, 0.9);
-  border-color: var(--gold-metallic);
-  transform: translateY(-4px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 0 12px rgba(212, 175, 55, 0.12);
+  background: #FFFFFF;
+  border-color: var(--champagne-accent);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(23, 28, 38, 0.08);
 }
 
 .amenity-icon-wrapper {
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  background: rgba(212, 175, 55, 0.08);
-  border: 1px solid var(--gold-metallic);
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(197, 164, 93, 0.1);
+  border: 1px solid rgba(197, 164, 93, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 0.85rem;
-  color: var(--gold-light);
-  transition: all 0.3s ease;
+  color: var(--champagne-dark);
+  transition: all 0.25s ease;
 }
 
 .amenity-card:hover .amenity-icon-wrapper {
-  transform: scale(1.08);
-  background: var(--grad-gold-foil);
-  color: #030712;
+  transform: scale(1.05);
+  background: var(--navy-dark);
+  border-color: var(--navy-dark);
+  color: var(--champagne-light);
 }
 
 /* ==========================================================================
    CAR SHOWCASE ("TWO LUCKY WINNERS. TWO DREAM CARS.")
-   Solid dark background with pure CSS lighting. NO background images.
+   Refined Dark Navy Showroom Background with Pure CSS Ambient Lighting
    ========================================================================== */
 .car-showcase-section {
   position: relative;
-  background: #02050e;
-  background-image: radial-gradient(circle at 50% 40%, rgba(212, 175, 55, 0.07) 0%, transparent 65%);
+  background: var(--navy-dark);
+  background-image: radial-gradient(circle at 50% 35%, rgba(197, 164, 93, 0.08) 0%, transparent 65%);
   overflow: hidden;
-  padding: 6rem 1rem;
-  border-top: 1px solid var(--navy-border);
-  border-bottom: 1px solid var(--navy-border);
+  padding: 5.5rem 1rem;
+  border-top: 1px solid rgba(197, 164, 93, 0.2);
+  border-bottom: 1px solid rgba(197, 164, 93, 0.2);
+  color: #FFFFFF;
 }
 
 #car-confetti-canvas {
@@ -723,10 +764,9 @@ body {
 }
 
 /* ==========================================================================
-   RESPONSIVENESS & ACCESSIBILITY (MOBILE-FIRST AUDITED: 320px, 375px, 390px, 430px)
+   RESPONSIVENESS & ACCESSIBILITY (MOBILE-FIRST AUDITED)
    ========================================================================== */
 
-/* Enhanced Mobile Menu Drawer Animation & Touch Targets */
 #mobile-menu {
   transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
   transform-origin: top center;
@@ -757,29 +797,26 @@ body {
 }
 
 .mobile-nav-link:active {
-  background-color: rgba(212, 175, 55, 0.15);
+  background-color: rgba(16, 24, 39, 0.06);
   transform: scale(0.99);
 }
 
-/* Tablet & Smaller Laptops (<= 1024px) */
 @media (max-width: 1024px) {
   .hero-car-img-wrapper {
     height: 280px;
   }
   .car-plot-label {
-    padding: 0.5rem 1rem;
+    padding: 0.45rem 0.95rem;
   }
   .car-plot-label .plot-text {
-    font-size: 0.8rem;
+    font-size: 0.78rem;
   }
   .car-plot-label .car-model {
-    font-size: 0.78rem;
+    font-size: 0.76rem;
   }
 }
 
-/* Tablets and Mobile (<= 768px) */
 @media (max-width: 768px) {
-  /* Hero Cars: Balanced Side-By-Side Showcase to Match Original Poster */
   .hero-cars-stage {
     margin: 0.75rem auto 1.25rem;
     padding: 0 0.5rem;
@@ -813,7 +850,7 @@ body {
     gap: 0.3rem;
     max-width: 96%;
     justify-content: center;
-    box-shadow: 0 4px 15px rgba(6, 17, 36, 0.4);
+    box-shadow: 0 4px 12px rgba(16, 24, 39, 0.2);
   }
   .car-plot-label .plot-text {
     font-size: clamp(0.62rem, 1.9vw, 0.78rem);
@@ -830,10 +867,9 @@ body {
   }
   .hero-cars-platform-line {
     bottom: 25px;
-    opacity: 0.45;
+    opacity: 0.4;
   }
 
-  /* Countdown Section Mobile Scaling */
   .countdown-section-open {
     padding: clamp(2.25rem, 5vw, 3.75rem) clamp(0.35rem, 2vw, 1rem);
   }
@@ -866,18 +902,16 @@ body {
     margin-top: clamp(0.25rem, 1vw, 0.45rem);
   }
 
-  /* Car Showcase Section Mobile Spacing */
   .car-showcase-section {
     padding: clamp(2.75rem, 6vw, 4.5rem) clamp(0.5rem, 2vw, 1rem);
   }
 
-  /* Amenities Card Compact Mobile Sizing */
   .amenity-card {
     padding: 1.15rem 0.65rem;
   }
   .amenity-icon-wrapper {
-    width: 44px;
-    height: 44px;
+    width: 42px;
+    height: 42px;
     margin-bottom: 0.65rem;
   }
   .amenity-card h3 {
@@ -885,13 +919,9 @@ body {
   }
 }
 
-/* Mobile Screens (<= 480px) */
 @media (max-width: 480px) {
   .hero-wrapper {
     padding-top: 4.5rem;
-  }
-  .countdown-box {
-    padding: 1rem 0.35rem;
   }
 }
 
@@ -956,7 +986,7 @@ body {
   }
 }
 
-/* Mobile Safe Area Inset Support (iPhone Home Bar & Dynamic Island) */
+/* Mobile Safe Area Inset Support */
 @supports (padding: env(safe-area-inset-bottom)) {
   .fixed.bottom-0 {
     padding-bottom: max(0.625rem, env(safe-area-inset-bottom));
@@ -993,25 +1023,24 @@ body {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--bg-dark);
+  background: #FAF8F3;
 }
 ::-webkit-scrollbar-thumb {
-  background: #0d2042;
+  background: #D5CEBF;
   border-radius: 4px;
-  border: 1px solid var(--gold-metallic);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--gold-metallic);
+  background: var(--champagne-accent);
 }
 
 /* ==========================================================================
-   MOBILE-FIRST INTERACTIVE SITE PLAN VIEWER (CRITICAL FULL-SCREEN MODULE)
+   MOBILE-FIRST INTERACTIVE SITE PLAN VIEWER
    ========================================================================== */
 #siteplan-viewer-modal {
   position: fixed;
   inset: 0;
   z-index: 10000;
-  background-color: #02050E;
+  background-color: #0B111E;
   touch-action: none;
   -webkit-touch-callout: none;
   user-select: none;
@@ -1048,20 +1077,15 @@ body {
   min-height: 44px;
 }
 
-/* ==========================================================================
-   CINEMATIC VISUAL EFFECTS & INTERACTIVE MODULES
-   ========================================================================== */
-
 /* Animated Showroom Platform Beam */
 @keyframes platformBeamPulse {
   0%, 100% {
-    opacity: 0.6;
+    opacity: 0.4;
     transform: scaleX(0.96);
   }
   50% {
-    opacity: 1;
+    opacity: 0.8;
     transform: scaleX(1);
-    box-shadow: 0 0 25px rgba(212, 175, 55, 0.7);
   }
 }
 .hero-cars-platform-line {
@@ -1090,8 +1114,8 @@ body {
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, transparent, rgba(255, 223, 115, 0.9), transparent);
-  box-shadow: 0 0 15px rgba(212, 175, 55, 0.9);
+  background: linear-gradient(90deg, transparent, rgba(197, 164, 93, 0.9), transparent);
+  box-shadow: 0 0 12px rgba(197, 164, 93, 0.6);
   pointer-events: none;
   z-index: 15;
   animation: radarSweepVertical 4s infinite linear;
@@ -1099,35 +1123,33 @@ body {
 
 /* Interactive Plot Calculator Styles */
 .plot-size-btn {
-  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1);
   min-height: 44px;
   cursor: pointer;
+  background: #FFFFFF;
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+}
+.plot-size-btn:hover {
+  border-color: var(--champagne-accent);
 }
 .plot-size-btn.active {
-  background: linear-gradient(135deg, #FFF8D6, #D4AF37);
-  color: #030712 !important;
+  background: var(--navy-dark) !important;
+  color: #FFFFFF !important;
   font-weight: 800;
-  border-color: #FFF8D6;
-  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
-}
-.payment-plan-btn {
-  transition: all 0.25s ease;
-  min-height: 40px;
-  cursor: pointer;
-}
-.payment-plan-btn.active {
-  background: rgba(212, 175, 55, 0.2);
-  color: #FFDF73 !important;
-  border-color: rgba(212, 175, 55, 0.6);
+  border-color: var(--navy-dark) !important;
+  box-shadow: 0 4px 12px rgba(16, 24, 39, 0.15);
 }
 
 /* FAQ Accordion Transitions */
 .faq-item {
-  transition: border-color 0.3s ease, background-color 0.3s ease;
+  transition: border-color 0.25s ease, background-color 0.25s ease;
+  background: #FFFFFF;
+  border: 1px solid var(--border-subtle);
 }
 .faq-item[open] {
-  border-color: rgba(212, 175, 55, 0.6);
-  background-color: rgba(8, 18, 38, 0.95);
+  border-color: var(--champagne-accent);
+  box-shadow: 0 4px 16px rgba(23, 28, 38, 0.05);
 }
 .faq-item summary {
   list-style: none;
@@ -1137,24 +1159,31 @@ body {
   display: none;
 }
 .faq-chevron {
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .faq-item[open] .faq-chevron {
   transform: rotate(180deg);
-  color: var(--gold-light);
+  color: var(--champagne-dark);
 }
 
 /* Project Filter Tabs */
 .project-filter-btn {
-  transition: all 0.3s ease;
+  transition: all 0.22s ease;
   min-height: 40px;
   cursor: pointer;
+  background: #FFFFFF;
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+}
+.project-filter-btn:hover {
+  color: var(--navy-dark);
+  border-color: var(--champagne-accent);
 }
 .project-filter-btn.active {
-  background: var(--grad-gold-foil);
-  color: #030712 !important;
-  border-color: #FFF8D6;
-  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+  background: var(--navy-dark) !important;
+  color: #FFFFFF !important;
+  border-color: var(--navy-dark) !important;
+  box-shadow: 0 2px 8px rgba(16, 24, 39, 0.12);
 }
 
 /* Floating Back to Top Button */
@@ -1166,16 +1195,15 @@ body {
   width: 44px;
   height: 44px;
   border-radius: 9999px;
-  background: rgba(8, 18, 38, 0.9);
-  border: 1px solid rgba(212, 175, 55, 0.5);
-  color: var(--gold-light);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(10px);
+  background: #FFFFFF;
+  border: 1px solid var(--border-subtle);
+  color: var(--navy-dark);
+  box-shadow: 0 4px 16px rgba(23, 28, 38, 0.12);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   opacity: 0;
   pointer-events: none;
   transform: translateY(10px);
@@ -1186,11 +1214,11 @@ body {
   transform: translateY(0);
 }
 #back-to-top-btn:hover {
-  background: var(--grad-gold-foil);
-  color: #030712;
-  border-color: #FFF8D6;
-  box-shadow: 0 6px 25px rgba(212, 175, 55, 0.5);
-  transform: translateY(-3px);
+  background: var(--navy-dark);
+  color: #FFFFFF;
+  border-color: var(--navy-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(16, 24, 39, 0.18);
 }
 @media (min-width: 640px) {
   #back-to-top-btn {
@@ -1200,38 +1228,3 @@ body {
     height: 48px;
   }
 }
-
-/* Navigation Links in Warm-White / Ivory Header */
-.nav-link {
-  color: #334155;
-  font-family: 'Manrope', Arial, sans-serif;
-  font-size: 14.5px;
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  transition: color 0.2s ease;
-  position: relative;
-}
-
-.nav-link:hover {
-  color: #091730;
-}
-
-.nav-link.active {
-  color: #091730 !important;
-  font-weight: 700;
-  position: relative;
-}
-
-.nav-link.active::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: #091730;
-  border-radius: 2px;
-  box-shadow: none;
-}
-
-

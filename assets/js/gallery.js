@@ -123,7 +123,7 @@
               <button 
                 type="button" 
                 onclick="window.openProjectModal('${proj.id}')"
-                class="min-h-[44px] px-4 py-2.5 sm:py-2 rounded-xl sm:rounded-full text-xs font-bold tracking-wider uppercase text-navy-950 bg-gradient-to-r from-gold-light via-gold-metallic to-gold-bronze hover:from-white hover:to-gold-light transition-all shadow-md text-center flex items-center justify-center"
+                class="min-h-[44px] px-4 py-2.5 sm:py-2 rounded-xl sm:rounded-full text-xs font-bold tracking-wider uppercase text-white bg-[#101827] hover:bg-[#1E293B] transition-all shadow-sm text-center flex items-center justify-center"
               >
                 PROJECT DETAILS
               </button>
