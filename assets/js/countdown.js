@@ -25,11 +25,11 @@
     if (sample && sample.offsetHeight > 0) {
       return sample.offsetHeight;
     }
-    if (window.innerWidth < 380) return 42;
-    if (window.innerWidth < 480) return 48;
-    if (window.innerWidth < 768) return 64;
-    if (window.innerWidth < 1024) return 80;
-    return 96;
+    if (window.innerWidth < 380) return 38;
+    if (window.innerWidth < 480) return 44;
+    if (window.innerWidth < 768) return 54;
+    if (window.innerWidth < 1024) return 64;
+    return 72;
   }
 
   /**
@@ -221,6 +221,9 @@
     countdownInterval = setInterval(() => tick(false), 1000);
     window.removeEventListener("resize", handleResize);
     window.addEventListener("resize", handleResize);
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(handleResize);
+    }
   }
 
   window.restartCountdown = function (newIsoString) {

@@ -12,10 +12,10 @@
   <meta property="og:description" content="Two Lucky Winners. Two Dream Cars. Book your residential plot at Dream Residency, Shamli." />
   <meta property="og:type" content="website" />
 
-  <!-- Google Fonts: Manrope -->
+  <!-- Google Fonts: Cinzel & Manrope -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <!-- Tailwind CSS CDN for instant responsive utility classes -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -32,18 +32,18 @@
               700: '#142f5e',
             },
             gold: {
-              highlight: '#FFF8D6',
-              light: '#FFDF73',
-              metallic: '#D4AF37',
-              bronze: '#AA771C',
-              champagne: '#F3E5AB',
+              highlight: '#FFF8E7',
+              light: '#EAD194',
+              metallic: '#D6B15E',
+              bronze: '#A97824',
+              champagne: '#EAD194',
             }
           },
           fontFamily: {
             sans: ['Manrope', 'Arial', 'sans-serif'],
-            cinzel: ['Manrope', 'Arial', 'sans-serif'],
+            cinzel: ['Cinzel', 'Georgia', 'serif'],
             montserrat: ['Manrope', 'Arial', 'sans-serif'],
-            playfair: ['Manrope', 'Arial', 'sans-serif'],
+            playfair: ['Cinzel', 'Georgia', 'serif'],
             manrope: ['Manrope', 'Arial', 'sans-serif']
           }
         }
@@ -141,58 +141,328 @@
   </header>
 
   <!-- ======================================================================
-       1. HERO SECTION (SOLID-COLOR FUTURISTIC ARCHITECTURAL DESIGN)
+       1. HERO SECTION (LUXURY ARCHITECTURAL INAUGURATION COMPOSITION)
+       Visual Order:
+       1. Navigation Bar
+       2. Small Centered Text: DREAM CITY GROUP, SHAMLI PRESENTS
+       3. Official Launch Countdown (Above Main Headline)
+       4. Large Curved Golden DREAM RESIDENCY Headline
+       5. Supporting Description
+       6. Grand-Opening Date Plaque (Deep Navy & Gold)
+       7. Hyundai Creta & Mahindra XUV 7XO in Foreground on Limestone Plaza
        ====================================================================== -->
-  <section id="hero" class="hero-wrapper pt-20 sm:pt-24 pb-6 relative justify-between">
-    <!-- Clean Solid Dark CSS Ambient Glow (No Background Photos) -->
+  <section id="hero" class="hero-wrapper pt-20 sm:pt-24 pb-8 relative justify-between">
+    <!-- Atmospheric lighting layers -->
     <div class="hero-css-glow"></div>
-    <div class="cyber-scanline"></div>
 
-    <!-- Top Typography & Company Branding -->
-    <div class="relative z-20 max-w-5xl mx-auto text-center px-4 pt-3 sm:pt-6">
+    <!-- Top Typography & Ceremonial Header Container -->
+    <div class="relative z-20 max-w-6xl mx-auto text-center px-4 pt-2 sm:pt-4">
       
-      <!-- Company Pre-Title Ribbon -->
-      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white border border-[#E8E3D8] shadow-sm mb-3">
-        <span class="w-1.5 h-1.5 rounded-full bg-[#C5A45D]"></span>
-        <span class="text-[10px] sm:text-xs font-bold tracking-widest text-[#7A602B] uppercase">
+      <!-- 2. Company Pre-Title Ribbon -->
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/90 border border-[#D6B15E]/50 shadow-sm mb-2 backdrop-blur-sm">
+        <span class="w-1.5 h-1.5 rounded-full bg-[#A97824]"></span>
+        <span class="text-[10px] sm:text-xs font-bold tracking-widest text-[#7A5618] uppercase">
           DREAM CITY GROUP, SHAMLI PRESENTS
         </span>
       </div>
 
-      <!-- Main Headline: DREAM RESIDENCY (Prominent, crisp, modern Manrope display) -->
-      <h1 class="font-cinzel font-manrope font-extrabold tracking-tight text-[#171C26] uppercase mb-3 select-none" style="font-size: clamp(2.35rem, 6.2vw, 4.85rem); line-height: 1.05; letter-spacing: -0.03em;">
-        DREAM RESIDENCY
-      </h1>
+      <!-- 3. OFFICIAL LAUNCH COUNTDOWN (ABOVE MAIN HEADLINE) -->
+      <div id="countdown-section" class="countdown-hero-container my-2 sm:my-3">
+        <!-- Top Pre-heading Accent -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/80 border border-[#D6B15E]/40 text-[#101827] text-[10px] sm:text-xs font-bold tracking-widest uppercase mb-2 shadow-xs backdrop-blur-xs">
+          <span class="w-1.5 h-1.5 rounded-full bg-[#A97824] animate-ping"></span>
+          <span id="countdown-status" class="countdown-open-heading font-semibold text-[#101827]">THE COUNTDOWN TO YOUR DREAM BEGINS</span>
+        </div>
 
-      <!-- Supporting Editorial Subtitle -->
-      <p class="text-sm sm:text-base md:text-lg font-medium text-[#5A6578] max-w-2xl mx-auto mb-4" style="line-height: 1.6;">
+        <!-- OPEN BORDERLESS CONTINUOUS HORIZONTAL COUNTDOWN IN REFINED FRAME -->
+        <div class="bg-white/75 border border-[#D6B15E]/40 rounded-2xl px-4 sm:px-8 py-2.5 shadow-xs backdrop-blur-xs max-w-xl mx-auto">
+          <div class="countdown-open-strip">
+            
+            <!-- 1. DAYS -->
+            <div class="countdown-open-unit">
+              <div class="countdown-open-numbers" id="unit-days">
+                <!-- Hundreds Wheel (active if >= 100 days) -->
+                <div id="days-wheel-0" class="odometer-digit-col days-hundreds-col" style="display: none;">
+                  <div class="odometer-ribbon">
+                    <div class="odometer-digit-item">9</div>
+                    <div class="odometer-digit-item">0</div>
+                    <div class="odometer-digit-item">1</div>
+                    <div class="odometer-digit-item">2</div>
+                    <div class="odometer-digit-item">3</div>
+                    <div class="odometer-digit-item">4</div>
+                    <div class="odometer-digit-item">5</div>
+                    <div class="odometer-digit-item">6</div>
+                    <div class="odometer-digit-item">7</div>
+                    <div class="odometer-digit-item">8</div>
+                    <div class="odometer-digit-item">9</div>
+                    <div class="odometer-digit-item">0</div>
+                  </div>
+                </div>
+                <!-- Tens Wheel -->
+                <div id="days-wheel-1" class="odometer-digit-col">
+                  <div class="odometer-ribbon">
+                    <div class="odometer-digit-item">9</div>
+                    <div class="odometer-digit-item">0</div>
+                    <div class="odometer-digit-item">1</div>
+                    <div class="odometer-digit-item">2</div>
+                    <div class="odometer-digit-item">3</div>
+                    <div class="odometer-digit-item">4</div>
+                    <div class="odometer-digit-item">5</div>
+                    <div class="odometer-digit-item">6</div>
+                    <div class="odometer-digit-item">7</div>
+                    <div class="odometer-digit-item">8</div>
+                    <div class="odometer-digit-item">9</div>
+                    <div class="odometer-digit-item">0</div>
+                  </div>
+                </div>
+                <!-- Units Wheel -->
+                <div id="days-wheel-2" class="odometer-digit-col">
+                  <div class="odometer-ribbon">
+                    <div class="odometer-digit-item">9</div>
+                    <div class="odometer-digit-item">0</div>
+                    <div class="odometer-digit-item">1</div>
+                    <div class="odometer-digit-item">2</div>
+                    <div class="odometer-digit-item">3</div>
+                    <div class="odometer-digit-item">4</div>
+                    <div class="odometer-digit-item">5</div>
+                    <div class="odometer-digit-item">6</div>
+                    <div class="odometer-digit-item">7</div>
+                    <div class="odometer-digit-item">8</div>
+                    <div class="odometer-digit-item">9</div>
+                    <div class="odometer-digit-item">0</div>
+                  </div>
+                </div>
+              </div>
+              <div class="countdown-open-label">DAYS</div>
+            </div>
+
+            <!-- SEPARATOR : -->
+            <div class="countdown-open-separator" aria-hidden="true">:</div>
+
+            <!-- 2. HOURS -->
+            <div class="countdown-open-unit">
+              <div class="countdown-open-numbers" id="unit-hours">
+                <!-- Tens Wheel -->
+                <div id="hours-wheel-0" class="odometer-digit-col">
+                  <div class="odometer-ribbon">
+                    <div class="odometer-digit-item">9</div>
+                    <div class="odometer-digit-item">0</div>
+                    <div class="odometer-digit-item">1</div>
+                    <div class="odometer-digit-item">2</div>
+                    <div class="odometer-digit-item">3</div>
+                    <div class="odometer-digit-item">4</div>
+                    <div class="odometer-digit-item">5</div>
+                    <div class="odometer-digit-item">6</div>
+                    <div class="odometer-digit-item">7</div>
+                    <div class="odometer-digit-item">8</div>
+                    <div class="odometer-digit-item">9</div>
+                    <div class="odometer-digit-item">0</div>
+                  </div>
+                </div>
+                <!-- Units Wheel -->
+                <div id="hours-wheel-1" class="odometer-digit-col">
+                  <div class="odometer-ribbon">
+                    <div class="odometer-digit-item">9</div>
+                    <div class="odometer-digit-item">0</div>
+                    <div class="odometer-digit-item">1</div>
+                    <div class="odometer-digit-item">2</div>
+                    <div class="odometer-digit-item">3</div>
+                    <div class="odometer-digit-item">4</div>
+                    <div class="odometer-digit-item">5</div>
+                    <div class="odometer-digit-item">6</div>
+                    <div class="odometer-digit-item">7</div>
+                    <div class="odometer-digit-item">8</div>
+                    <div class="odometer-digit-item">9</div>
+                    <div class="odometer-digit-item">0</div>
+                  </div>
+                </div>
+              </div>
+              <div class="countdown-open-label">HOURS</div>
+            </div>
+
+            <!-- SEPARATOR : -->
+            <div class="countdown-open-separator" aria-hidden="true">:</div>
+
+            <!-- 3. MINUTES -->
+            <div class="countdown-open-unit">
+              <div class="countdown-open-numbers" id="unit-minutes">
+                <!-- Tens Wheel -->
+                <div id="minutes-wheel-0" class="odometer-digit-col">
+                  <div class="odometer-ribbon">
+                    <div class="odometer-digit-item">9</div>
+                    <div class="odometer-digit-item">0</div>
+                    <div class="odometer-digit-item">1</div>
+                    <div class="odometer-digit-item">2</div>
+                    <div class="odometer-digit-item">3</div>
+                    <div class="odometer-digit-item">4</div>
+                    <div class="odometer-digit-item">5</div>
+                    <div class="odometer-digit-item">6</div>
+                    <div class="odometer-digit-item">7</div>
+                    <div class="odometer-digit-item">8</div>
+                    <div class="odometer-digit-item">9</div>
+                    <div class="odometer-digit-item">0</div>
+                  </div>
+                </div>
+                <!-- Units Wheel -->
+                <div id="minutes-wheel-1" class="odometer-digit-col">
+                  <div class="odometer-ribbon">
+                    <div class="odometer-digit-item">9</div>
+                    <div class="odometer-digit-item">0</div>
+                    <div class="odometer-digit-item">1</div>
+                    <div class="odometer-digit-item">2</div>
+                    <div class="odometer-digit-item">3</div>
+                    <div class="odometer-digit-item">4</div>
+                    <div class="odometer-digit-item">5</div>
+                    <div class="odometer-digit-item">6</div>
+                    <div class="odometer-digit-item">7</div>
+                    <div class="odometer-digit-item">8</div>
+                    <div class="odometer-digit-item">9</div>
+                    <div class="odometer-digit-item">0</div>
+                  </div>
+                </div>
+              </div>
+              <div class="countdown-open-label">MINUTES</div>
+            </div>
+
+            <!-- SEPARATOR : -->
+            <div class="countdown-open-separator" aria-hidden="true">:</div>
+
+            <!-- 4. SECONDS -->
+            <div class="countdown-open-unit">
+              <div class="countdown-open-numbers" id="unit-seconds">
+                <!-- Tens Wheel -->
+                <div id="seconds-wheel-0" class="odometer-digit-col">
+                  <div class="odometer-ribbon">
+                    <div class="odometer-digit-item">9</div>
+                    <div class="odometer-digit-item">0</div>
+                    <div class="odometer-digit-item">1</div>
+                    <div class="odometer-digit-item">2</div>
+                    <div class="odometer-digit-item">3</div>
+                    <div class="odometer-digit-item">4</div>
+                    <div class="odometer-digit-item">5</div>
+                    <div class="odometer-digit-item">6</div>
+                    <div class="odometer-digit-item">7</div>
+                    <div class="odometer-digit-item">8</div>
+                    <div class="odometer-digit-item">9</div>
+                    <div class="odometer-digit-item">0</div>
+                  </div>
+                </div>
+                <!-- Units Wheel -->
+                <div id="seconds-wheel-1" class="odometer-digit-col">
+                  <div class="odometer-ribbon">
+                    <div class="odometer-digit-item">9</div>
+                    <div class="odometer-digit-item">0</div>
+                    <div class="odometer-digit-item">1</div>
+                    <div class="odometer-digit-item">2</div>
+                    <div class="odometer-digit-item">3</div>
+                    <div class="odometer-digit-item">4</div>
+                    <div class="odometer-digit-item">5</div>
+                    <div class="odometer-digit-item">6</div>
+                    <div class="odometer-digit-item">7</div>
+                    <div class="odometer-digit-item">8</div>
+                    <div class="odometer-digit-item">9</div>
+                    <div class="odometer-digit-item">0</div>
+                  </div>
+                </div>
+              </div>
+              <div class="countdown-open-label">SECONDS</div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Hidden accessible spans for tests & screen readers -->
+        <div class="sr-only">
+          <span id="cd-days">00</span>
+          <span id="cd-hours">00</span>
+          <span id="cd-minutes">00</span>
+          <span id="cd-seconds">00</span>
+        </div>
+      </div>
+
+      <!-- 4. Main Headline: DREAM RESIDENCY (Curved Dramatic Gold Typography) -->
+      <div class="relative w-full max-w-4xl mx-auto my-1 sm:my-2 select-none flex justify-center items-center">
+        <h1 class="sr-only">DREAM RESIDENCY</h1>
+        <svg viewBox="0 0 1000 135" class="w-full h-auto overflow-visible" aria-hidden="true">
+          <defs>
+            <!-- Gentle symmetrical upward curve with comfortable margins -->
+            <path id="dream-residency-curve" d="M 60,110 Q 500,45 940,110" fill="transparent" />
+            
+            <!-- Champagne & Rich Antique Gold Linear Gradient -->
+            <linearGradient id="gold-foil-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#F9E29D" />
+              <stop offset="22%" stop-color="#DEB656" />
+              <stop offset="52%" stop-color="#B28220" />
+              <stop offset="78%" stop-color="#DEB656" />
+              <stop offset="100%" stop-color="#6E4B0A" />
+            </linearGradient>
+
+            <!-- Subtle Dimensional Depth Filter -->
+            <filter id="gold-relief-depth" x="-10%" y="-20%" width="120%" height="150%">
+              <feDropShadow dx="0" dy="3.5" stdDeviation="2.5" flood-color="#211502" flood-opacity="0.45" />
+              <feDropShadow dx="0" dy="1" stdDeviation="0.5" flood-color="#FFFDF7" flood-opacity="0.85" />
+            </filter>
+          </defs>
+          <text 
+            font-family="'Cinzel', Georgia, serif" 
+            font-weight="900" 
+            font-size="62" 
+            letter-spacing="6" 
+            fill="url(#gold-foil-grad)" 
+            filter="url(#gold-relief-depth)"
+            stroke="#78530C"
+            stroke-width="0.75"
+          >
+            <textPath href="#dream-residency-curve" startOffset="50%" text-anchor="middle">
+              DREAM RESIDENCY
+            </textPath>
+          </text>
+        </svg>
+      </div>
+
+      <!-- 5. Supporting Editorial Subtitle -->
+      <p class="text-sm sm:text-base md:text-lg font-medium text-[#252A32] max-w-2xl mx-auto my-2 text-center" style="line-height: 1.6;">
         A thoughtfully planned residential destination in Shamli, Uttar Pradesh.
       </p>
 
-      <!-- Grand Opening & Official Date Milestone Pill -->
-      <div class="inline-flex flex-wrap items-center justify-center gap-2 sm:gap-4 px-5 sm:px-8 py-2.5 rounded-full bg-[#101827] text-white shadow-md mb-3">
-        <span class="font-cinzel text-xs sm:text-sm font-bold tracking-widest text-[#DFCA9A] uppercase">
-          GRAND OPENING
-        </span>
-        <span class="hidden sm:inline text-[#C5A45D]/60">•</span>
-        <span class="font-cinzel text-xs sm:text-sm md:text-base font-extrabold tracking-wider text-white uppercase whitespace-nowrap">
-          25 OCTOBER 2026
-        </span>
+      <!-- 6. Grand Opening Date Plaque (Prestigious Ceremonial Navy & Gold Plaque) -->
+      <div class="grand-opening-plaque mx-auto my-2 sm:my-3 inline-flex items-center justify-center">
+        <div class="relative bg-[#101827] border-2 border-[#D6B15E] px-6 sm:px-10 py-2.5 sm:py-3 rounded-lg shadow-xl text-center">
+          <!-- Ornamental corner brackets -->
+          <span class="absolute top-1 left-1 w-2 h-2 border-t-2 border-l-2 border-[#D6B15E]"></span>
+          <span class="absolute top-1 right-1 w-2 h-2 border-t-2 border-r-2 border-[#D6B15E]"></span>
+          <span class="absolute bottom-1 left-1 w-2 h-2 border-b-2 border-l-2 border-[#D6B15E]"></span>
+          <span class="absolute bottom-1 right-1 w-2 h-2 border-b-2 border-r-2 border-[#D6B15E]"></span>
+
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-1.5 sm:gap-4">
+            <span class="font-cinzel text-xs sm:text-sm font-bold tracking-[0.2em] text-[#D6B15E] uppercase">
+              GRAND OPENING
+            </span>
+            <span class="hidden sm:inline text-[#D6B15E]/60 text-xs">•</span>
+            <span class="font-cinzel text-sm sm:text-base md:text-lg font-black tracking-wider text-white uppercase whitespace-nowrap">
+              25 OCTOBER 2026
+            </span>
+          </div>
+        </div>
       </div>
 
-      <!-- Telemetry Coordinates Badge -->
-      <div class="mt-1 flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 text-[10px] sm:text-xs font-mono font-medium tracking-wider text-[#5A6578] uppercase max-w-full px-2 text-center">
+      <!-- Telemetry Coordinates Badge & Date Adjuster Trigger -->
+      <div class="mt-1 flex flex-wrap items-center justify-center gap-2 text-[10px] sm:text-xs font-mono font-medium tracking-wider text-[#5A6578] uppercase max-w-full px-2 text-center">
         <span class="w-1.5 h-1.5 rounded-full bg-emerald-600 shrink-0"></span>
         <span class="break-words">COORDINATES: 29.4475° N, 77.3141° E // SHAMLI SECTOR 1</span>
+        <span class="hidden sm:inline text-slate-400">•</span>
+        <button type="button" onclick="window.openDateAdjuster()" class="underline hover:text-[#101827] text-[#7A5618] lowercase tracking-normal font-sans font-semibold transition-colors">
+          ⚙ preview / adjust time
+        </button>
       </div>
 
     </div>
 
     <!-- ====================================================================
-         2. CARS IN HERO (DOMINATING, LARGE, SIDE-BY-SIDE ON LUXURY PLATFORM)
-         Hyundai Creta & Mahindra XUV 7XO on Solid Dark Showroom Ground
+         7. CARS IN HERO (DOMINATING, LARGE, SIDE-BY-SIDE ON LIMESTONE PLAZA)
+         Hyundai Creta & Mahindra XUV 7XO in Foreground
          ==================================================================== -->
-    <div id="hero-cars" class="hero-cars-stage my-4 sm:my-6">
+    <div id="hero-cars" class="hero-cars-stage my-3 sm:my-5">
       <!-- Showroom Platform Horizon Line -->
       <div class="hero-cars-platform-line"></div>
 
@@ -261,266 +531,12 @@
 
     <!-- Scroll Down Hint Indicator -->
     <div class="relative z-20 text-center pb-2">
-      <a href="#countdown-section" aria-label="Scroll to Countdown" class="inline-flex flex-col items-center text-[#5A6578] hover:text-[#101827] transition-colors">
-        <span class="text-[10px] font-bold tracking-widest uppercase mb-1">SCROLL DOWN</span>
+      <a href="#amenities" aria-label="Scroll to Amenities" class="inline-flex flex-col items-center text-[#5A6578] hover:text-[#101827] transition-colors">
+        <span class="text-[10px] font-bold tracking-widest uppercase mb-1">EXPLORE TOWNSHIP</span>
         <svg class="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
         </svg>
       </a>
-    </div>
-  </section>
-
-  <!-- ======================================================================
-       3. COUNTDOWN SECTION (OPEN HORIZONTAL ROLLING ODOMETER)
-       Warm Ivory Background with Deep Navy / Charcoal Typography
-       and Borderless Numbers in One Continuous Horizontal Line
-       ====================================================================== -->
-  <section id="countdown-section" class="countdown-section-open">
-    <!-- Subtle CSS Gold Radial Lighting (No photo backgrounds) -->
-    <div class="countdown-champagne-glow"></div>
-    <div class="countdown-fine-lines"></div>
-
-    <div class="max-w-6xl mx-auto px-4 text-center relative z-10 pt-2 pb-6 sm:pb-10">
-      
-      <!-- Top Pre-heading Accent -->
-      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white border border-[#E8E3D8] text-[#171C26] text-xs font-bold tracking-widest uppercase mb-3 sm:mb-4 shadow-sm">
-        <span class="w-2 h-2 rounded-full bg-[#C5A45D] animate-ping"></span>
-        OFFICIAL LAUNCH COUNTDOWN
-      </div>
-
-      <!-- Heading ABOVE the countdown -->
-      <h2 id="countdown-status" class="countdown-open-heading font-cinzel text-2xl sm:text-4xl md:text-5xl font-extrabold text-[#171C26] tracking-tight uppercase mb-8 sm:mb-12">
-        THE COUNTDOWN TO YOUR DREAM BEGINS
-      </h2>
-
-      <!-- OPEN BORDERLESS CONTINUOUS HORIZONTAL COUNTDOWN -->
-      <div class="countdown-open-strip">
-        
-        <!-- 1. DAYS -->
-        <div class="countdown-open-unit">
-          <div class="countdown-open-numbers" id="unit-days">
-            <!-- Hundreds Wheel (active if >= 100 days) -->
-            <div id="days-wheel-0" class="odometer-digit-col days-hundreds-col" style="display: none;">
-              <div class="odometer-ribbon">
-                <div class="odometer-digit-item">9</div>
-                <div class="odometer-digit-item">0</div>
-                <div class="odometer-digit-item">1</div>
-                <div class="odometer-digit-item">2</div>
-                <div class="odometer-digit-item">3</div>
-                <div class="odometer-digit-item">4</div>
-                <div class="odometer-digit-item">5</div>
-                <div class="odometer-digit-item">6</div>
-                <div class="odometer-digit-item">7</div>
-                <div class="odometer-digit-item">8</div>
-                <div class="odometer-digit-item">9</div>
-                <div class="odometer-digit-item">0</div>
-              </div>
-            </div>
-            <!-- Tens Wheel -->
-            <div id="days-wheel-1" class="odometer-digit-col">
-              <div class="odometer-ribbon">
-                <div class="odometer-digit-item">9</div>
-                <div class="odometer-digit-item">0</div>
-                <div class="odometer-digit-item">1</div>
-                <div class="odometer-digit-item">2</div>
-                <div class="odometer-digit-item">3</div>
-                <div class="odometer-digit-item">4</div>
-                <div class="odometer-digit-item">5</div>
-                <div class="odometer-digit-item">6</div>
-                <div class="odometer-digit-item">7</div>
-                <div class="odometer-digit-item">8</div>
-                <div class="odometer-digit-item">9</div>
-                <div class="odometer-digit-item">0</div>
-              </div>
-            </div>
-            <!-- Units Wheel -->
-            <div id="days-wheel-2" class="odometer-digit-col">
-              <div class="odometer-ribbon">
-                <div class="odometer-digit-item">9</div>
-                <div class="odometer-digit-item">0</div>
-                <div class="odometer-digit-item">1</div>
-                <div class="odometer-digit-item">2</div>
-                <div class="odometer-digit-item">3</div>
-                <div class="odometer-digit-item">4</div>
-                <div class="odometer-digit-item">5</div>
-                <div class="odometer-digit-item">6</div>
-                <div class="odometer-digit-item">7</div>
-                <div class="odometer-digit-item">8</div>
-                <div class="odometer-digit-item">9</div>
-                <div class="odometer-digit-item">0</div>
-              </div>
-            </div>
-          </div>
-          <div class="countdown-open-label">DAYS</div>
-        </div>
-
-        <!-- SEPARATOR : -->
-        <div class="countdown-open-separator" aria-hidden="true">:</div>
-
-        <!-- 2. HOURS -->
-        <div class="countdown-open-unit">
-          <div class="countdown-open-numbers" id="unit-hours">
-            <!-- Tens Wheel -->
-            <div id="hours-wheel-0" class="odometer-digit-col">
-              <div class="odometer-ribbon">
-                <div class="odometer-digit-item">9</div>
-                <div class="odometer-digit-item">0</div>
-                <div class="odometer-digit-item">1</div>
-                <div class="odometer-digit-item">2</div>
-                <div class="odometer-digit-item">3</div>
-                <div class="odometer-digit-item">4</div>
-                <div class="odometer-digit-item">5</div>
-                <div class="odometer-digit-item">6</div>
-                <div class="odometer-digit-item">7</div>
-                <div class="odometer-digit-item">8</div>
-                <div class="odometer-digit-item">9</div>
-                <div class="odometer-digit-item">0</div>
-              </div>
-            </div>
-            <!-- Units Wheel -->
-            <div id="hours-wheel-1" class="odometer-digit-col">
-              <div class="odometer-ribbon">
-                <div class="odometer-digit-item">9</div>
-                <div class="odometer-digit-item">0</div>
-                <div class="odometer-digit-item">1</div>
-                <div class="odometer-digit-item">2</div>
-                <div class="odometer-digit-item">3</div>
-                <div class="odometer-digit-item">4</div>
-                <div class="odometer-digit-item">5</div>
-                <div class="odometer-digit-item">6</div>
-                <div class="odometer-digit-item">7</div>
-                <div class="odometer-digit-item">8</div>
-                <div class="odometer-digit-item">9</div>
-                <div class="odometer-digit-item">0</div>
-              </div>
-            </div>
-          </div>
-          <div class="countdown-open-label">HOURS</div>
-        </div>
-
-        <!-- SEPARATOR : -->
-        <div class="countdown-open-separator" aria-hidden="true">:</div>
-
-        <!-- 3. MINUTES -->
-        <div class="countdown-open-unit">
-          <div class="countdown-open-numbers" id="unit-minutes">
-            <!-- Tens Wheel -->
-            <div id="minutes-wheel-0" class="odometer-digit-col">
-              <div class="odometer-ribbon">
-                <div class="odometer-digit-item">9</div>
-                <div class="odometer-digit-item">0</div>
-                <div class="odometer-digit-item">1</div>
-                <div class="odometer-digit-item">2</div>
-                <div class="odometer-digit-item">3</div>
-                <div class="odometer-digit-item">4</div>
-                <div class="odometer-digit-item">5</div>
-                <div class="odometer-digit-item">6</div>
-                <div class="odometer-digit-item">7</div>
-                <div class="odometer-digit-item">8</div>
-                <div class="odometer-digit-item">9</div>
-                <div class="odometer-digit-item">0</div>
-              </div>
-            </div>
-            <!-- Units Wheel -->
-            <div id="minutes-wheel-1" class="odometer-digit-col">
-              <div class="odometer-ribbon">
-                <div class="odometer-digit-item">9</div>
-                <div class="odometer-digit-item">0</div>
-                <div class="odometer-digit-item">1</div>
-                <div class="odometer-digit-item">2</div>
-                <div class="odometer-digit-item">3</div>
-                <div class="odometer-digit-item">4</div>
-                <div class="odometer-digit-item">5</div>
-                <div class="odometer-digit-item">6</div>
-                <div class="odometer-digit-item">7</div>
-                <div class="odometer-digit-item">8</div>
-                <div class="odometer-digit-item">9</div>
-                <div class="odometer-digit-item">0</div>
-              </div>
-            </div>
-          </div>
-          <div class="countdown-open-label">MINUTES</div>
-        </div>
-
-        <!-- SEPARATOR : -->
-        <div class="countdown-open-separator" aria-hidden="true">:</div>
-
-        <!-- 4. SECONDS -->
-        <div class="countdown-open-unit">
-          <div class="countdown-open-numbers" id="unit-seconds">
-            <!-- Tens Wheel -->
-            <div id="seconds-wheel-0" class="odometer-digit-col">
-              <div class="odometer-ribbon">
-                <div class="odometer-digit-item">9</div>
-                <div class="odometer-digit-item">0</div>
-                <div class="odometer-digit-item">1</div>
-                <div class="odometer-digit-item">2</div>
-                <div class="odometer-digit-item">3</div>
-                <div class="odometer-digit-item">4</div>
-                <div class="odometer-digit-item">5</div>
-                <div class="odometer-digit-item">6</div>
-                <div class="odometer-digit-item">7</div>
-                <div class="odometer-digit-item">8</div>
-                <div class="odometer-digit-item">9</div>
-                <div class="odometer-digit-item">0</div>
-              </div>
-            </div>
-            <!-- Units Wheel -->
-            <div id="seconds-wheel-1" class="odometer-digit-col">
-              <div class="odometer-ribbon">
-                <div class="odometer-digit-item">9</div>
-                <div class="odometer-digit-item">0</div>
-                <div class="odometer-digit-item">1</div>
-                <div class="odometer-digit-item">2</div>
-                <div class="odometer-digit-item">3</div>
-                <div class="odometer-digit-item">4</div>
-                <div class="odometer-digit-item">5</div>
-                <div class="odometer-digit-item">6</div>
-                <div class="odometer-digit-item">7</div>
-                <div class="odometer-digit-item">8</div>
-                <div class="odometer-digit-item">9</div>
-                <div class="odometer-digit-item">0</div>
-              </div>
-            </div>
-          </div>
-          <div class="countdown-open-label">SECONDS</div>
-        </div>
-
-      </div>
-
-      <!-- Hidden accessible spans for tests & screen readers -->
-      <div class="sr-only">
-        <span id="cd-days">00</span>
-        <span id="cd-hours">00</span>
-        <span id="cd-minutes">00</span>
-        <span id="cd-seconds">00</span>
-      </div>
-
-      <!-- BELOW THE NUMBERS: GRAND OPENING — 25 OCTOBER 2026 -->
-      <div class="text-center mt-10 sm:mt-12">
-        <div class="inline-flex items-center gap-3 sm:gap-6 px-6 sm:px-10 py-2.5 sm:py-3 rounded-full bg-white border border-[#E8E3D8] shadow-sm">
-          <div class="w-6 sm:w-12 h-0.5 bg-[#E8E3D8]"></div>
-          <span class="font-cinzel text-xs sm:text-base md:text-lg font-extrabold tracking-widest text-[#171C26] uppercase">
-            GRAND OPENING — 25 OCTOBER 2026
-          </span>
-          <div class="w-6 sm:w-12 h-0.5 bg-[#E8E3D8]"></div>
-        </div>
-      </div>
-
-      <!-- Timezone & Config Trigger -->
-      <div class="mt-6 sm:mt-8 flex flex-wrap items-center justify-center gap-4 text-xs text-[#5A6578] font-medium">
-        <span class="flex items-center gap-1.5">
-          <svg class="w-4 h-4 text-[#C5A45D]" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
-          </svg>
-          Timezone: Asia/Kolkata (IST UTC+05:30)
-        </span>
-        <span class="hidden sm:inline text-slate-300">•</span>
-        <button type="button" onclick="window.openDateAdjuster()" class="underline hover:text-[#101827] text-[#5A6578] font-semibold transition-colors">
-          ⚙ Preview / Adjust Opening Time
-        </button>
-      </div>
-
     </div>
   </section>
 

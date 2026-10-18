@@ -5,50 +5,50 @@
    Zero photo backgrounds. Modern typography, balanced spacing, and clean depth.
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap');
 
 :root {
-  /* Editorial Palette: Warm Ivory & Surface Whites */
-  --bg-page: #FAF8F3;
+  /* Warm Ivory & Champagne Architectural Palette */
+  --bg-page: #FAF4E8;
   --bg-surface: #FFFFFF;
   --bg-surface-elevated: #FDFBF7;
-  --bg-warm-tint: #F3EFE6;
+  --bg-warm-tint: #F5EFE3;
   --bg-warm-subtle: #FAF6EE;
 
-  /* Typography Colors: Deep Charcoal & Slate */
-  --text-primary: #171C26;
+  /* Typography Colors */
+  --text-primary: #252A32;
   --text-secondary: #5A6578;
   --text-muted: #8A94A6;
 
-  /* Architectural Dark Navy */
+  /* Architectural Deep Navy */
   --navy-dark: #101827;
   --navy-surface: #1E293B;
   --navy-deep: #0B111E;
 
-  /* Restrained Champagne Accent (Subtle, elegant, non-gaudy) */
-  --champagne-accent: #C5A45D;
-  --champagne-light: #DFCA9A;
-  --champagne-dark: #8C6D2D;
-  --champagne-subtle: rgba(197, 164, 93, 0.12);
+  /* Refined Champagne & Antique Gold */
+  --champagne-accent: #D6B15E;
+  --champagne-light: #EAD194;
+  --champagne-dark: #A97824;
+  --champagne-subtle: rgba(214, 177, 94, 0.15);
 
-  /* Subtle Warm Architectural Borders */
-  --border-subtle: #E8E3D8;
-  --border-divider: #ECE7DC;
-  --border-champagne: rgba(197, 164, 93, 0.35);
+  /* Warm Architectural Borders */
+  --border-subtle: #E8E0D2;
+  --border-divider: #ECE4D6;
+  --border-champagne: rgba(214, 177, 94, 0.4);
 
   /* Legacy compatibility variables */
-  --bg-dark: #FAF8F3;
-  --bg-navy: #FAF8F3;
+  --bg-dark: #FAF4E8;
+  --bg-navy: #FAF4E8;
   --bg-navy-card: #FFFFFF;
-  --navy-border: #E8E3D8;
-  --gold-metallic: #C5A45D;
-  --gold-light: #DFCA9A;
-  --gold-highlight: #FAF6EE;
-  --gold-bronze: #8C6D2D;
-  --gold-champagne: #DFCA9A;
-  --grad-gold-foil: linear-gradient(135deg, #DFCA9A 0%, #C5A45D 100%);
-  --grad-gold-text: #171C26;
-  --grad-gold-border: rgba(197, 164, 93, 0.4);
+  --navy-border: #E8E0D2;
+  --gold-metallic: #D6B15E;
+  --gold-light: #EAD194;
+  --gold-highlight: #FFF8E7;
+  --gold-bronze: #A97824;
+  --gold-champagne: #EAD194;
+  --grad-gold-foil: linear-gradient(135deg, #EAD194 0%, #D6B15E 50%, #A97824 100%);
+  --grad-gold-text: #252A32;
+  --grad-gold-border: rgba(214, 177, 94, 0.4);
   --grad-hero-css-light: radial-gradient(ellipse 70% 50% at 50% 10%, rgba(255, 255, 255, 0.8) 0%, transparent 70%);
 
   /* Modern Web Guidance: Explicit Color Interpolation Tokens */
@@ -101,8 +101,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Typography Classes — Universal System-Wide Unification to Manrope */
-.font-cinzel,
+/* Typography Classes */
+.font-cinzel {
+  font-family: 'Cinzel', Georgia, serif !important;
+  letter-spacing: 0.04em;
+}
+
 .font-jakarta,
 .font-playfair,
 .font-montserrat,
@@ -126,11 +130,11 @@ body {
 }
 
 .text-gold-light {
-  color: var(--champagne-dark);
+  color: var(--champagne-accent);
 }
 
 .text-gold-champagne {
-  color: var(--champagne-accent);
+  color: var(--champagne-light);
 }
 
 /* Subtle Geometric Architectural Pattern (CSS-Only, No Images) */
@@ -162,27 +166,25 @@ body {
   justify-content: center;
   padding: 0.75rem 1.85rem;
   font-family: 'Manrope', Arial, sans-serif;
-  font-weight: 700;
+  font-weight: 800;
   font-size: 0.8125rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: #FFFFFF !important;
-  background: var(--navy-dark) !important;
-  border: 1px solid var(--navy-dark);
+  color: #101827 !important;
+  background: linear-gradient(135deg, #EAD194 0%, #D6B15E 50%, #C59E47 100%) !important;
+  border: 1px solid #D6B15E !important;
   border-radius: 9999px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(16, 24, 39, 0.12);
+  box-shadow: 0 4px 14px rgba(214, 177, 94, 0.32);
   transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   text-decoration: none;
 }
 
 .btn-gold:hover {
-  background: var(--navy-surface) !important;
-  border-color: var(--navy-surface);
-  color: #FFFFFF !important;
+  filter: brightness(1.06);
   transform: translateY(-1.5px);
-  box-shadow: 0 6px 18px rgba(16, 24, 39, 0.18);
+  box-shadow: 0 6px 20px rgba(214, 177, 94, 0.45);
 }
 
 .btn-gold::after {
@@ -217,33 +219,31 @@ body {
   box-shadow: 0 4px 14px rgba(16, 24, 39, 0.08);
 }
 
-/* Header Enquiry Button (Crisp Dark Navy Pill) */
+/* Header Enquiry Button (Refined Champagne Gold Button) */
 .btn-navy-header {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.625rem 1.35rem;
+  padding: 0.6rem 1.45rem;
   font-family: 'Manrope', Arial, sans-serif;
-  font-weight: 700;
+  font-weight: 800;
   font-size: 0.8125rem;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: #FFFFFF !important;
-  background: var(--navy-dark) !important;
-  border: 1px solid var(--navy-dark) !important;
+  color: #101827 !important;
+  background: linear-gradient(135deg, #EAD194 0%, #D6B15E 50%, #C59E47 100%) !important;
+  border: 1px solid #D6B15E !important;
   border-radius: 9999px;
   transition: all 0.2s ease;
   cursor: pointer;
   text-decoration: none;
-  box-shadow: 0 2px 6px rgba(16, 24, 39, 0.12);
+  box-shadow: 0 2px 8px rgba(214, 177, 94, 0.28);
 }
 
 .btn-navy-header:hover {
-  background: var(--navy-surface) !important;
-  border-color: var(--navy-surface) !important;
-  color: #FFFFFF !important;
+  filter: brightness(1.08);
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(16, 24, 39, 0.18);
+  box-shadow: 0 4px 14px rgba(214, 177, 94, 0.45);
 }
 
 .btn-navy-header::after {
@@ -255,13 +255,13 @@ body {
    Solid warm-white / ivory background, dark charcoal links, title case
    ========================================================================== */
 #main-nav {
-  background-color: #FAF8F5;
+  background-color: #FAF4E8;
   border-bottom: 1px solid var(--border-subtle);
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 1px 6px rgba(16, 24, 39, 0.04);
 }
 
 .nav-link {
-  color: #4A5568;
+  color: #374151;
   font-family: 'Manrope', Arial, sans-serif;
   font-size: 14px;
   font-weight: 600;
@@ -292,14 +292,23 @@ body {
 }
 
 /* ==========================================================================
-   HERO SECTION (WARM IVORY EDITORIAL COMPOSITION)
+   HERO SECTION (LUXURY ARCHITECTURAL INAUGURATION COMPOSITION)
    ========================================================================== */
 .hero-wrapper {
   position: relative;
   width: 100%;
-  background-color: var(--bg-page);
+  background-color: #FAF4E8;
   background-image: 
-    radial-gradient(ellipse 70% 45% at 50% 0%, #FFFFFF 0%, var(--bg-page) 75%);
+    linear-gradient(180deg, 
+      rgba(250, 244, 232, 0.95) 0%, 
+      rgba(250, 244, 232, 0.86) 28%, 
+      rgba(250, 244, 232, 0.38) 58%, 
+      rgba(250, 244, 232, 0.92) 100%
+    ),
+    url('/assets/images/grand_arch_hero_bg.jpg');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
   color: var(--text-primary);
   overflow: hidden;
   display: flex;
@@ -329,21 +338,36 @@ body {
 }
 
 .hero-cars-platform-line {
-  position: absolute;
-  bottom: 38px;
-  left: 12%;
-  width: 76%;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(197, 164, 93, 0.35) 25%, rgba(197, 164, 93, 0.6) 50%, rgba(197, 164, 93, 0.35) 75%, transparent);
-  pointer-events: none;
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .hero-cars-platform-line {
+    display: block;
+    position: absolute;
+    bottom: 38px;
+    left: 12%;
+    width: 76%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(197, 164, 93, 0.35) 25%, rgba(197, 164, 93, 0.6) 50%, rgba(197, 164, 93, 0.35) 75%, transparent);
+    pointer-events: none;
+  }
 }
 
 .hero-cars-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  align-items: flex-end;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  align-items: center;
   justify-content: center;
+}
+
+@media (min-width: 640px) {
+  .hero-cars-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    align-items: flex-end;
+  }
 }
 
 .hero-car-item {
@@ -362,11 +386,17 @@ body {
   position: relative;
   width: 100%;
   max-width: 600px;
-  height: 350px;
+  height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: transform 0.15s ease-out;
+}
+
+@media (min-width: 640px) {
+  .hero-car-img-wrapper {
+    height: 350px;
+  }
 }
 
 .hero-car-img {
@@ -534,7 +564,7 @@ body {
   display: flex;
   align-items: baseline;
   justify-content: center;
-  height: 96px;
+  height: 72px;
   overflow: hidden;
   -webkit-mask-image: linear-gradient(180deg, transparent 0%, black 15%, black 85%, transparent 100%);
   mask-image: linear-gradient(180deg, transparent 0%, black 15%, black 85%, transparent 100%);
@@ -542,23 +572,28 @@ body {
 
 @media (max-width: 1024px) {
   .countdown-open-numbers {
-    height: 80px;
+    height: 64px;
   }
 }
 @media (max-width: 768px) {
   .countdown-open-numbers {
-    height: 64px;
+    height: 54px;
   }
 }
 @media (max-width: 480px) {
   .countdown-open-numbers {
-    height: 48px;
+    height: 44px;
+  }
+}
+@media (max-width: 380px) {
+  .countdown-open-numbers {
+    height: 38px;
   }
 }
 
 .odometer-digit-col {
   position: relative;
-  width: 52px;
+  width: 42px;
   height: 100%;
   overflow: hidden;
   text-align: center;
@@ -566,17 +601,22 @@ body {
 
 @media (max-width: 1024px) {
   .odometer-digit-col {
-    width: 44px;
+    width: 36px;
   }
 }
 @media (max-width: 768px) {
   .odometer-digit-col {
-    width: 34px;
+    width: 28px;
   }
 }
 @media (max-width: 480px) {
   .odometer-digit-col {
-    width: 24px;
+    width: 22px;
+  }
+}
+@media (max-width: 380px) {
+  .odometer-digit-col {
+    width: 18px;
   }
 }
 
@@ -587,53 +627,60 @@ body {
 }
 
 .odometer-digit-item {
-  height: 96px;
-  line-height: 96px;
-  font-family: 'Manrope', Arial, sans-serif !important;
-  font-size: clamp(2.6rem, 6.5vw, 5rem);
+  height: 72px;
+  line-height: 72px;
+  font-family: 'Cinzel', Georgia, serif !important;
+  font-size: clamp(2rem, 4.5vw, 3.6rem);
   font-weight: 800;
   text-align: center;
-  color: var(--text-primary);
-  background: none;
-  -webkit-text-fill-color: var(--text-primary);
-  filter: none;
+  color: #8C651E;
+  background: linear-gradient(180deg, #A97824 0%, #D6B15E 50%, #7A5310 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   user-select: none;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.01em;
 }
 
 @media (max-width: 1024px) {
   .odometer-digit-item {
-    height: 80px;
-    line-height: 80px;
-    font-size: 3.8rem;
+    height: 64px;
+    line-height: 64px;
+    font-size: 3rem;
   }
 }
 @media (max-width: 768px) {
   .odometer-digit-item {
-    height: 64px;
-    line-height: 64px;
-    font-size: 2.6rem;
+    height: 54px;
+    line-height: 54px;
+    font-size: 2.2rem;
   }
 }
 @media (max-width: 480px) {
   .odometer-digit-item {
-    height: 48px;
-    line-height: 48px;
-    font-size: 1.85rem;
+    height: 44px;
+    line-height: 44px;
+    font-size: 1.65rem;
+  }
+}
+@media (max-width: 380px) {
+  .odometer-digit-item {
+    height: 38px;
+    line-height: 38px;
+    font-size: 1.4rem;
   }
 }
 
 /* Restrained Champagne Colon Separator */
 .countdown-open-separator {
-  font-family: 'Manrope', Arial, sans-serif !important;
-  font-size: clamp(2rem, 4.5vw, 4rem);
+  font-family: 'Cinzel', Georgia, serif !important;
+  font-size: clamp(1.6rem, 3.5vw, 2.8rem);
   font-weight: 700;
-  height: 96px;
-  line-height: 88px;
-  color: var(--champagne-accent);
-  opacity: 0.9;
+  height: 72px;
+  line-height: 68px;
+  color: #D6B15E;
+  opacity: 0.95;
   user-select: none;
-  padding: 0 0.25rem;
+  padding: 0 0.15rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -641,34 +688,41 @@ body {
 
 @media (max-width: 1024px) {
   .countdown-open-separator {
-    height: 80px;
-    line-height: 74px;
+    height: 64px;
+    line-height: 60px;
   }
 }
 @media (max-width: 768px) {
   .countdown-open-separator {
-    height: 64px;
-    line-height: 58px;
-    font-size: 2.2rem;
+    height: 54px;
+    line-height: 50px;
+    font-size: 1.8rem;
     padding: 0 0.05rem;
   }
 }
 @media (max-width: 480px) {
   .countdown-open-separator {
-    height: 48px;
-    line-height: 42px;
-    font-size: 1.5rem;
+    height: 44px;
+    line-height: 40px;
+    font-size: 1.35rem;
+  }
+}
+@media (max-width: 380px) {
+  .countdown-open-separator {
+    height: 38px;
+    line-height: 35px;
+    font-size: 1.15rem;
   }
 }
 
 .countdown-open-label {
   font-family: 'Manrope', Arial, sans-serif !important;
-  font-size: 0.75rem;
+  font-size: 0.6875rem;
   font-weight: 700;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--text-secondary);
-  margin-top: 0.75rem;
+  margin-top: 0.35rem;
   text-align: center;
 }
 
