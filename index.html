@@ -12,6 +12,11 @@
   <meta property="og:description" content="Two Lucky Winners. Two Dream Cars. Book your residential plot at Dream Residency, Shamli." />
   <meta property="og:type" content="website" />
 
+  <!-- Google Fonts: Manrope -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
   <!-- Tailwind CSS CDN for instant responsive utility classes -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -35,10 +40,11 @@
             }
           },
           fontFamily: {
-            cinzel: ['"Plus Jakarta Sans"', 'Cinzel', 'sans-serif'],
-            montserrat: ['Inter', 'Montserrat', 'sans-serif'],
-            playfair: ['"Playfair Display"', 'Georgia', 'serif'],
-            sans: ['Inter', 'sans-serif']
+            sans: ['Manrope', 'Arial', 'sans-serif'],
+            cinzel: ['Manrope', 'Arial', 'sans-serif'],
+            montserrat: ['Manrope', 'Arial', 'sans-serif'],
+            playfair: ['Manrope', 'Arial', 'sans-serif'],
+            manrope: ['Manrope', 'Arial', 'sans-serif']
           }
         }
       }
@@ -51,9 +57,10 @@
 <body class="bg-navy-950 text-slate-100 antialiased selection:bg-gold-metallic selection:text-navy-950">
 
   <!-- ======================================================================
-       NAVIGATION BAR
+       NAVIGATION BAR (SOLID WARM-WHITE / IVORY ARCHITECTURAL HEADER)
+       High-contrast dark navy branding, dark charcoal links, refined enquire CTA
        ====================================================================== -->
-  <header id="main-nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-3 sm:py-3.5 px-3 sm:px-8 bg-navy-950/95 backdrop-blur-md border-b border-gold-metallic/20 shadow-md">
+  <header id="main-nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-3 sm:py-3.5 px-3 sm:px-8 bg-[#FAF8F5] border-b border-[#E8E2D5] shadow-sm">
     <div class="max-w-7xl mx-auto flex items-center justify-between gap-3 sm:gap-6">
       
       <!-- Brand Logo / Emblem on One Horizontal Line -->
@@ -63,38 +70,38 @@
             src="/assets/images/logo_crest.png" 
             onerror="this.src='/assets/images/logo/dream-city-group.png'"
             alt="Dream City Group Crest" 
-            class="max-w-full max-h-full object-contain filter drop-shadow(0 2px 5px rgba(0,0,0,0.4))" 
+            class="max-w-full max-h-full object-contain filter drop-shadow-sm" 
           />
         </div>
         <div class="flex items-center whitespace-nowrap overflow-hidden">
-          <span class="font-cinzel text-xs sm:text-sm md:text-base lg:text-lg font-bold tracking-tight text-white group-hover:text-gold-champagne transition-colors truncate">
+          <span class="font-cinzel text-xs sm:text-sm md:text-base lg:text-lg font-bold tracking-tight text-[#091730] group-hover:text-[#B8860B] transition-colors truncate">
             DREAM CITY GROUP, SHAMLI
           </span>
         </div>
       </a>
 
-      <!-- Desktop Nav Links -->
-      <nav class="hidden lg:flex items-center gap-5 xl:gap-7 text-[13px] font-medium tracking-normal text-slate-200">
-        <a href="#hero" class="nav-link hover:text-gold-champagne transition-colors py-1">Home</a>
-        <a href="#countdown-section" class="nav-link hover:text-gold-champagne transition-colors py-1">Grand Opening</a>
-        <a href="#hero-cars" class="nav-link hover:text-gold-champagne transition-colors py-1">Cars</a>
-        <a href="#dream-residency" class="nav-link hover:text-gold-champagne transition-colors py-1">Dream Residency</a>
-        <a href="#projects" class="nav-link hover:text-gold-champagne transition-colors py-1">Our Projects</a>
-        <a href="#location" class="nav-link hover:text-gold-champagne transition-colors py-1">Location</a>
-        <a href="#faq" class="nav-link hover:text-gold-champagne transition-colors py-1">FAQ</a>
-        <a href="#contact" class="nav-link hover:text-gold-champagne transition-colors py-1">Contact</a>
+      <!-- Desktop Nav Links (High Contrast Dark Charcoal) -->
+      <nav class="hidden lg:flex items-center gap-5 xl:gap-7 text-[14px] font-semibold text-slate-700 tracking-normal">
+        <a href="#hero" class="nav-link hover:text-[#091730] transition-colors py-1">Home</a>
+        <a href="#countdown-section" class="nav-link hover:text-[#091730] transition-colors py-1">Grand Opening</a>
+        <a href="#hero-cars" class="nav-link hover:text-[#091730] transition-colors py-1">Cars</a>
+        <a href="#dream-residency" class="nav-link hover:text-[#091730] transition-colors py-1">Dream Residency</a>
+        <a href="#projects" class="nav-link hover:text-[#091730] transition-colors py-1">Our Projects</a>
+        <a href="#location" class="nav-link hover:text-[#091730] transition-colors py-1">Location</a>
+        <a href="#faq" class="nav-link hover:text-[#091730] transition-colors py-1">FAQ</a>
+        <a href="#contact" class="nav-link hover:text-[#091730] transition-colors py-1">Contact</a>
       </nav>
 
-      <!-- Desktop Right CTA: One Enquire Now Button -->
+      <!-- Desktop Right CTA: Refined Enquire Now Button -->
       <div class="hidden lg:flex items-center shrink-0">
-        <a href="#contact" class="btn-gold text-xs px-5 py-2.5 rounded-full font-bold uppercase tracking-wider shadow-md">
+        <a href="#contact" class="btn-navy-header btn-gold text-xs px-5 py-2.5 rounded-full font-bold uppercase tracking-wider shadow-sm">
           Enquire Now
         </a>
       </div>
 
       <!-- Mobile Right Quick Actions: Enquire CTA + Hamburger Menu Toggle -->
       <div class="flex lg:hidden items-center gap-2 shrink-0">
-        <a href="#contact" class="btn-gold text-[10px] sm:text-xs px-3 sm:px-4 py-2 rounded-full font-bold uppercase tracking-wider shrink-0 shadow-md">
+        <a href="#contact" class="btn-navy-header btn-gold text-[10px] sm:text-xs px-3 sm:px-4 py-2 rounded-full font-bold uppercase tracking-wider shrink-0 shadow-sm">
           Enquire
         </a>
         <button 
@@ -102,7 +109,7 @@
           type="button" 
           aria-label="Toggle Navigation Menu" 
           aria-expanded="false"
-          class="w-10 h-10 p-2 rounded-xl text-gold-light bg-navy-900 border border-gold-metallic/30 hover:bg-white/10 active:scale-95 transition-all flex items-center justify-center shrink-0"
+          class="w-10 h-10 p-2 rounded-xl text-slate-800 bg-white border border-[#E8E2D5] hover:bg-slate-100 active:scale-95 transition-all flex items-center justify-center shrink-0 shadow-sm"
         >
           <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -112,21 +119,21 @@
 
     </div>
 
-    <!-- Mobile Dropdown Menu (Comfortable 44px+ touch targets) -->
-    <div id="mobile-menu" class="hidden lg:hidden bg-navy-950/98 border-t border-gold-metallic/30 mt-2.5 pt-3 pb-5 px-3 rounded-b-2xl shadow-2xl space-y-1">
-      <a href="#hero" class="mobile-nav-link min-h-[44px] flex items-center px-3 rounded-xl text-sm font-semibold tracking-wide uppercase text-slate-200 hover:text-gold-light hover:bg-white/5">Home</a>
-      <a href="#countdown-section" class="mobile-nav-link min-h-[44px] flex items-center px-3 rounded-xl text-sm font-semibold tracking-wide uppercase text-slate-200 hover:text-gold-light hover:bg-white/5">Grand Opening</a>
-      <a href="#hero-cars" class="mobile-nav-link min-h-[44px] flex items-center px-3 rounded-xl text-sm font-semibold tracking-wide uppercase text-slate-200 hover:text-gold-light hover:bg-white/5">Cars</a>
-      <a href="#dream-residency" class="mobile-nav-link min-h-[44px] flex items-center px-3 rounded-xl text-sm font-semibold tracking-wide uppercase text-slate-200 hover:text-gold-light hover:bg-white/5">Dream Residency</a>
-      <button type="button" onclick="window.closeMobileMenu(); window.openSitePlanViewer();" class="mobile-nav-link w-full text-left min-h-[44px] flex items-center px-3 rounded-xl text-sm font-semibold tracking-wide uppercase text-gold-champagne hover:bg-white/5">
+    <!-- Mobile Dropdown Menu (Comfortable 44px+ touch targets on warm white background) -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-[#FAF8F5] border-t border-[#E8E2D5] mt-2.5 pt-3 pb-5 px-3 rounded-b-2xl shadow-xl space-y-1">
+      <a href="#hero" class="mobile-nav-link min-h-[44px] flex items-center px-3 rounded-xl text-sm font-semibold tracking-normal text-slate-800 hover:text-[#091730] hover:bg-black/5">Home</a>
+      <a href="#countdown-section" class="mobile-nav-link min-h-[44px] flex items-center px-3 rounded-xl text-sm font-semibold tracking-normal text-slate-800 hover:text-[#091730] hover:bg-black/5">Grand Opening</a>
+      <a href="#hero-cars" class="mobile-nav-link min-h-[44px] flex items-center px-3 rounded-xl text-sm font-semibold tracking-normal text-slate-800 hover:text-[#091730] hover:bg-black/5">Cars</a>
+      <a href="#dream-residency" class="mobile-nav-link min-h-[44px] flex items-center px-3 rounded-xl text-sm font-semibold tracking-normal text-slate-800 hover:text-[#091730] hover:bg-black/5">Dream Residency</a>
+      <button type="button" onclick="window.closeMobileMenu(); window.openSitePlanViewer();" class="mobile-nav-link w-full text-left min-h-[44px] flex items-center px-3 rounded-xl text-sm font-semibold tracking-normal text-[#091730] hover:bg-black/5">
         🗺️ Full Site Plan (Zoom)
       </button>
-      <a href="#projects" class="mobile-nav-link min-h-[44px] flex items-center px-3 rounded-xl text-sm font-semibold tracking-wide uppercase text-slate-200 hover:text-gold-light hover:bg-white/5">Our Projects</a>
-      <a href="#location" class="mobile-nav-link min-h-[44px] flex items-center px-3 rounded-xl text-sm font-semibold tracking-wide uppercase text-slate-200 hover:text-gold-light hover:bg-white/5">Location</a>
-      <a href="#faq" class="mobile-nav-link min-h-[44px] flex items-center px-3 rounded-xl text-sm font-semibold tracking-wide uppercase text-slate-200 hover:text-gold-light hover:bg-white/5">FAQ</a>
-      <a href="#contact" class="mobile-nav-link min-h-[44px] flex items-center px-3 rounded-xl text-sm font-semibold tracking-wide uppercase text-slate-200 hover:text-gold-light hover:bg-white/5">Contact</a>
-      <div class="pt-3 border-t border-white/10 mt-2">
-        <a href="#contact" class="mobile-nav-link min-h-[48px] flex items-center justify-center w-full py-3 rounded-xl btn-gold text-center font-bold text-xs tracking-wider uppercase shadow-xl">
+      <a href="#projects" class="mobile-nav-link min-h-[44px] flex items-center px-3 rounded-xl text-sm font-semibold tracking-normal text-slate-800 hover:text-[#091730] hover:bg-black/5">Our Projects</a>
+      <a href="#location" class="mobile-nav-link min-h-[44px] flex items-center px-3 rounded-xl text-sm font-semibold tracking-normal text-slate-800 hover:text-[#091730] hover:bg-black/5">Location</a>
+      <a href="#faq" class="mobile-nav-link min-h-[44px] flex items-center px-3 rounded-xl text-sm font-semibold tracking-normal text-slate-800 hover:text-[#091730] hover:bg-black/5">FAQ</a>
+      <a href="#contact" class="mobile-nav-link min-h-[44px] flex items-center px-3 rounded-xl text-sm font-semibold tracking-normal text-slate-800 hover:text-[#091730] hover:bg-black/5">Contact</a>
+      <div class="pt-3 border-t border-slate-200 mt-2">
+        <a href="#contact" class="mobile-nav-link min-h-[48px] flex items-center justify-center w-full py-3 rounded-xl btn-navy-header btn-gold text-center font-bold text-xs tracking-wider uppercase shadow-md">
           Enquire Now
         </a>
       </div>
@@ -152,23 +159,23 @@
         </span>
       </div>
 
-      <!-- Main Headline: DREAM RESIDENCY (Prominent, crisp, modern architectural display) -->
-      <h1 class="font-cinzel text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-navy-950 uppercase mb-2 select-none">
+      <!-- Main Headline: DREAM RESIDENCY (Prominent, crisp, modern Manrope display) -->
+      <h1 class="font-cinzel font-manrope font-extrabold tracking-tight text-[#091730] uppercase mb-3 select-none" style="font-size: clamp(2.25rem, 6.2vw, 4.85rem); line-height: 1.06; letter-spacing: -0.025em;">
         DREAM RESIDENCY
       </h1>
 
       <!-- Supporting Editorial Subtitle -->
-      <p class="text-xs sm:text-sm md:text-base font-medium text-slate-700 max-w-2xl mx-auto mb-3">
+      <p class="text-sm sm:text-base md:text-lg font-medium text-slate-700 max-w-2xl mx-auto mb-4" style="line-height: 1.6;">
         A thoughtfully planned residential destination in Shamli, Uttar Pradesh.
       </p>
 
       <!-- Grand Opening & Official Date Milestone Pill -->
-      <div class="inline-flex flex-wrap items-center justify-center gap-2 sm:gap-4 px-4 sm:px-8 py-2 rounded-full bg-navy-950 border border-gold-metallic/40 shadow-lg shadow-navy-950/15 mb-3">
-        <span class="font-cinzel text-xs sm:text-sm md:text-base font-bold tracking-widest text-gold-champagne uppercase">
+      <div class="inline-flex flex-wrap items-center justify-center gap-2 sm:gap-4 px-5 sm:px-8 py-2.5 rounded-full bg-[#091730] text-white shadow-md mb-3">
+        <span class="font-cinzel text-xs sm:text-sm font-bold tracking-widest text-gold-champagne uppercase">
           GRAND OPENING
         </span>
         <span class="hidden sm:inline text-gold-metallic/60">•</span>
-        <span class="font-cinzel text-xs sm:text-sm md:text-base font-black tracking-widest text-white uppercase whitespace-nowrap">
+        <span class="font-cinzel text-xs sm:text-sm md:text-base font-extrabold tracking-wider text-white uppercase whitespace-nowrap">
           25 OCTOBER 2026
         </span>
       </div>
