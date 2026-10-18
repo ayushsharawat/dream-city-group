@@ -35,9 +35,10 @@
             }
           },
           fontFamily: {
-            cinzel: ['Cinzel', 'Georgia', 'serif'],
-            montserrat: ['Montserrat', 'sans-serif'],
-            playfair: ['Playfair Display', 'Georgia', 'serif']
+            cinzel: ['"Plus Jakarta Sans"', 'Cinzel', 'sans-serif'],
+            montserrat: ['Inter', 'Montserrat', 'sans-serif'],
+            playfair: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['Inter', 'sans-serif']
           }
         }
       }
@@ -52,41 +53,41 @@
   <!-- ======================================================================
        NAVIGATION BAR
        ====================================================================== -->
-  <header id="main-nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-2.5 sm:py-3.5 px-3 sm:px-8 bg-navy-950/95 backdrop-blur-md border-b border-gold-metallic/20 shadow-lg">
-    <div class="max-w-7xl mx-auto flex items-center justify-between gap-2 sm:gap-4">
+  <header id="main-nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-3 sm:py-3.5 px-3 sm:px-8 bg-navy-950/95 backdrop-blur-md border-b border-gold-metallic/20 shadow-md">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-3 sm:gap-6">
       
       <!-- Brand Logo / Emblem on One Horizontal Line -->
-      <a href="#hero" class="flex items-center gap-2 sm:gap-3 group shrink min-w-0 text-decoration-none">
+      <a href="#hero" class="flex items-center gap-2.5 sm:gap-3 group shrink min-w-0 text-decoration-none">
         <div class="w-8 h-8 sm:w-11 sm:h-11 shrink-0 flex items-center justify-center">
           <img 
             src="/assets/images/logo_crest.png" 
             onerror="this.src='/assets/images/logo/dream-city-group.png'"
             alt="Dream City Group Crest" 
-            class="max-w-full max-h-full object-contain filter drop-shadow(0 0 8px rgba(212,175,55,0.4))" 
+            class="max-w-full max-h-full object-contain filter drop-shadow(0 2px 5px rgba(0,0,0,0.4))" 
           />
         </div>
         <div class="flex items-center whitespace-nowrap overflow-hidden">
-          <span class="font-cinzel text-xs sm:text-sm md:text-base lg:text-lg font-black tracking-wide sm:tracking-wider text-gold-light group-hover:text-white transition-colors truncate">
+          <span class="font-cinzel text-xs sm:text-sm md:text-base lg:text-lg font-bold tracking-tight text-white group-hover:text-gold-champagne transition-colors truncate">
             DREAM CITY GROUP, SHAMLI
           </span>
         </div>
       </a>
 
       <!-- Desktop Nav Links -->
-      <nav class="hidden lg:flex items-center gap-5 xl:gap-7 text-xs font-bold tracking-widest uppercase text-slate-300">
-        <a href="#hero" class="nav-link hover:text-gold-light transition-colors py-1">Home</a>
-        <a href="#countdown-section" class="nav-link hover:text-gold-light transition-colors py-1">Grand Opening</a>
-        <a href="#hero-cars" class="nav-link hover:text-gold-light transition-colors py-1">Cars</a>
-        <a href="#dream-residency" class="nav-link hover:text-gold-light transition-colors py-1">Dream Residency</a>
-        <a href="#projects" class="nav-link hover:text-gold-light transition-colors py-1">Our Projects</a>
-        <a href="#location" class="nav-link hover:text-gold-light transition-colors py-1">Location</a>
-        <a href="#faq" class="nav-link hover:text-gold-light transition-colors py-1">FAQ</a>
-        <a href="#contact" class="nav-link hover:text-gold-light transition-colors py-1">Contact</a>
+      <nav class="hidden lg:flex items-center gap-5 xl:gap-7 text-[13px] font-medium tracking-normal text-slate-200">
+        <a href="#hero" class="nav-link hover:text-gold-champagne transition-colors py-1">Home</a>
+        <a href="#countdown-section" class="nav-link hover:text-gold-champagne transition-colors py-1">Grand Opening</a>
+        <a href="#hero-cars" class="nav-link hover:text-gold-champagne transition-colors py-1">Cars</a>
+        <a href="#dream-residency" class="nav-link hover:text-gold-champagne transition-colors py-1">Dream Residency</a>
+        <a href="#projects" class="nav-link hover:text-gold-champagne transition-colors py-1">Our Projects</a>
+        <a href="#location" class="nav-link hover:text-gold-champagne transition-colors py-1">Location</a>
+        <a href="#faq" class="nav-link hover:text-gold-champagne transition-colors py-1">FAQ</a>
+        <a href="#contact" class="nav-link hover:text-gold-champagne transition-colors py-1">Contact</a>
       </nav>
 
       <!-- Desktop Right CTA: One Enquire Now Button -->
       <div class="hidden lg:flex items-center shrink-0">
-        <a href="#contact" class="btn-gold text-xs px-6 py-2.5 rounded-full font-bold uppercase tracking-wider shadow-lg shadow-gold-metallic/20">
+        <a href="#contact" class="btn-gold text-xs px-5 py-2.5 rounded-full font-bold uppercase tracking-wider shadow-md">
           Enquire Now
         </a>
       </div>
@@ -101,7 +102,7 @@
           type="button" 
           aria-label="Toggle Navigation Menu" 
           aria-expanded="false"
-          class="w-10 h-10 p-2 rounded-xl text-gold-light bg-navy-900 border border-gold-metallic/40 hover:bg-white/10 active:scale-95 transition-all flex items-center justify-center shrink-0"
+          class="w-10 h-10 p-2 rounded-xl text-gold-light bg-navy-900 border border-gold-metallic/30 hover:bg-white/10 active:scale-95 transition-all flex items-center justify-center shrink-0"
         >
           <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -113,17 +114,17 @@
 
     <!-- Mobile Dropdown Menu (Comfortable 44px+ touch targets) -->
     <div id="mobile-menu" class="hidden lg:hidden bg-navy-950/98 border-t border-gold-metallic/30 mt-2.5 pt-3 pb-5 px-3 rounded-b-2xl shadow-2xl space-y-1">
-      <a href="#hero" class="mobile-nav-link min-h-[44px] flex items-center px-3 rounded-xl text-sm font-bold tracking-wider uppercase text-slate-200 hover:text-gold-light hover:bg-white/5">Home</a>
-      <a href="#countdown-section" class="mobile-nav-link min-h-[44px] flex items-center px-3 rounded-xl text-sm font-bold tracking-wider uppercase text-slate-200 hover:text-gold-light hover:bg-white/5">Grand Opening</a>
-      <a href="#hero-cars" class="mobile-nav-link min-h-[44px] flex items-center px-3 rounded-xl text-sm font-bold tracking-wider uppercase text-slate-200 hover:text-gold-light hover:bg-white/5">Cars</a>
-      <a href="#dream-residency" class="mobile-nav-link min-h-[44px] flex items-center px-3 rounded-xl text-sm font-bold tracking-wider uppercase text-slate-200 hover:text-gold-light hover:bg-white/5">Dream Residency</a>
-      <button type="button" onclick="window.closeMobileMenu(); window.openSitePlanViewer();" class="mobile-nav-link w-full text-left min-h-[44px] flex items-center px-3 rounded-xl text-sm font-bold tracking-wider uppercase text-gold-light hover:bg-white/5">
+      <a href="#hero" class="mobile-nav-link min-h-[44px] flex items-center px-3 rounded-xl text-sm font-semibold tracking-wide uppercase text-slate-200 hover:text-gold-light hover:bg-white/5">Home</a>
+      <a href="#countdown-section" class="mobile-nav-link min-h-[44px] flex items-center px-3 rounded-xl text-sm font-semibold tracking-wide uppercase text-slate-200 hover:text-gold-light hover:bg-white/5">Grand Opening</a>
+      <a href="#hero-cars" class="mobile-nav-link min-h-[44px] flex items-center px-3 rounded-xl text-sm font-semibold tracking-wide uppercase text-slate-200 hover:text-gold-light hover:bg-white/5">Cars</a>
+      <a href="#dream-residency" class="mobile-nav-link min-h-[44px] flex items-center px-3 rounded-xl text-sm font-semibold tracking-wide uppercase text-slate-200 hover:text-gold-light hover:bg-white/5">Dream Residency</a>
+      <button type="button" onclick="window.closeMobileMenu(); window.openSitePlanViewer();" class="mobile-nav-link w-full text-left min-h-[44px] flex items-center px-3 rounded-xl text-sm font-semibold tracking-wide uppercase text-gold-champagne hover:bg-white/5">
         🗺️ Full Site Plan (Zoom)
       </button>
-      <a href="#projects" class="mobile-nav-link min-h-[44px] flex items-center px-3 rounded-xl text-sm font-bold tracking-wider uppercase text-slate-200 hover:text-gold-light hover:bg-white/5">Our Projects</a>
-      <a href="#location" class="mobile-nav-link min-h-[44px] flex items-center px-3 rounded-xl text-sm font-bold tracking-wider uppercase text-slate-200 hover:text-gold-light hover:bg-white/5">Location</a>
-      <a href="#faq" class="mobile-nav-link min-h-[44px] flex items-center px-3 rounded-xl text-sm font-bold tracking-wider uppercase text-slate-200 hover:text-gold-light hover:bg-white/5">FAQ</a>
-      <a href="#contact" class="mobile-nav-link min-h-[44px] flex items-center px-3 rounded-xl text-sm font-bold tracking-wider uppercase text-slate-200 hover:text-gold-light hover:bg-white/5">Contact</a>
+      <a href="#projects" class="mobile-nav-link min-h-[44px] flex items-center px-3 rounded-xl text-sm font-semibold tracking-wide uppercase text-slate-200 hover:text-gold-light hover:bg-white/5">Our Projects</a>
+      <a href="#location" class="mobile-nav-link min-h-[44px] flex items-center px-3 rounded-xl text-sm font-semibold tracking-wide uppercase text-slate-200 hover:text-gold-light hover:bg-white/5">Location</a>
+      <a href="#faq" class="mobile-nav-link min-h-[44px] flex items-center px-3 rounded-xl text-sm font-semibold tracking-wide uppercase text-slate-200 hover:text-gold-light hover:bg-white/5">FAQ</a>
+      <a href="#contact" class="mobile-nav-link min-h-[44px] flex items-center px-3 rounded-xl text-sm font-semibold tracking-wide uppercase text-slate-200 hover:text-gold-light hover:bg-white/5">Contact</a>
       <div class="pt-3 border-t border-white/10 mt-2">
         <a href="#contact" class="mobile-nav-link min-h-[48px] flex items-center justify-center w-full py-3 rounded-xl btn-gold text-center font-bold text-xs tracking-wider uppercase shadow-xl">
           Enquire Now
@@ -141,47 +142,40 @@
     <div class="cyber-scanline"></div>
 
     <!-- Top Typography & Company Branding -->
-    <div class="relative z-20 max-w-6xl mx-auto text-center px-4 pt-3 sm:pt-5">
+    <div class="relative z-20 max-w-5xl mx-auto text-center px-4 pt-3 sm:pt-6">
       
       <!-- Company Pre-Title Ribbon -->
-      <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full bg-navy-950 border border-gold-metallic/50 shadow-md mb-2 sm:mb-3">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-navy-950 border border-gold-metallic/40 shadow-sm mb-3">
         <span class="w-1.5 h-1.5 rounded-full bg-gold-light"></span>
-        <span class="font-montserrat text-[10px] sm:text-xs md:text-sm font-extrabold tracking-widest text-gold-champagne uppercase">
+        <span class="text-[10px] sm:text-xs font-bold tracking-widest text-gold-champagne uppercase">
           DREAM CITY GROUP, SHAMLI PRESENTS
         </span>
       </div>
 
-      <!-- Project Name Heading: Deep Navy with Crisp Definition on Champagne -->
-      <h2 class="font-cinzel text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black tracking-wider text-navy-950 uppercase mb-1 drop-shadow-sm select-none">
+      <!-- Main Headline: DREAM RESIDENCY (Prominent, crisp, modern architectural display) -->
+      <h1 class="font-cinzel text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-navy-950 uppercase mb-2 select-none">
         DREAM RESIDENCY
-      </h2>
+      </h1>
 
-      <!-- Subtitle -->
-      <p class="font-montserrat text-[11px] sm:text-xs md:text-base font-bold tracking-widest text-navy-900/85 uppercase max-w-3xl mx-auto mb-2 sm:mb-3">
-        A PRESTIGIOUS RESIDENTIAL TOWNSHIP IN SHAMLI, UTTAR PRADESH
+      <!-- Supporting Editorial Subtitle -->
+      <p class="text-xs sm:text-sm md:text-base font-medium text-slate-700 max-w-2xl mx-auto mb-3">
+        A thoughtfully planned residential destination in Shamli, Uttar Pradesh.
       </p>
 
-      <!-- Massive Grand Opening Typography -->
-      <div class="my-1 sm:my-2">
-        <div class="inline-block relative">
-          <h1 class="font-cinzel text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tight uppercase text-gold-3d leading-none py-1 select-none">
-            GRAND OPENING
-          </h1>
-        </div>
-      </div>
-
-      <!-- Grand Opening Date Badge -->
-      <div class="mt-1.5 sm:mt-3 inline-flex items-center gap-2.5 sm:gap-6 px-4 sm:px-10 py-1.5 sm:py-2.5 rounded-2xl bg-navy-950 border-2 border-gold-metallic shadow-xl shadow-navy-950/20">
-        <div class="w-4 sm:w-14 h-0.5 bg-gradient-to-r from-transparent to-gold-metallic"></div>
-        <span class="font-cinzel text-base sm:text-2xl md:text-3xl lg:text-4xl font-black tracking-widest text-white uppercase whitespace-nowrap">
+      <!-- Grand Opening & Official Date Milestone Pill -->
+      <div class="inline-flex flex-wrap items-center justify-center gap-2 sm:gap-4 px-4 sm:px-8 py-2 rounded-full bg-navy-950 border border-gold-metallic/40 shadow-lg shadow-navy-950/15 mb-3">
+        <span class="font-cinzel text-xs sm:text-sm md:text-base font-bold tracking-widest text-gold-champagne uppercase">
+          GRAND OPENING
+        </span>
+        <span class="hidden sm:inline text-gold-metallic/60">•</span>
+        <span class="font-cinzel text-xs sm:text-sm md:text-base font-black tracking-widest text-white uppercase whitespace-nowrap">
           25 OCTOBER 2026
         </span>
-        <div class="w-4 sm:w-14 h-0.5 bg-gradient-to-l from-transparent to-gold-metallic"></div>
       </div>
 
       <!-- Telemetry Coordinates Badge -->
-      <div class="mt-2 flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 text-[9px] sm:text-xs font-mono font-bold tracking-wider sm:tracking-widest text-navy-900/75 uppercase max-w-full px-2 text-center">
-        <span class="w-1.5 h-1.5 rounded-full bg-cyan-600 animate-ping shrink-0"></span>
+      <div class="mt-1 flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 text-[10px] sm:text-xs font-mono font-medium tracking-wider text-slate-600 uppercase max-w-full px-2 text-center">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-600 shrink-0"></span>
         <span class="break-words">COORDINATES: 29.4475° N, 77.3141° E // SHAMLI SECTOR 1</span>
       </div>
 
@@ -191,7 +185,7 @@
          2. CARS IN HERO (DOMINATING, LARGE, SIDE-BY-SIDE ON LUXURY PLATFORM)
          Hyundai Creta & Mahindra XUV 7XO on Solid Dark Showroom Ground
          ==================================================================== -->
-    <div id="hero-cars" class="hero-cars-stage my-6 sm:my-8">
+    <div id="hero-cars" class="hero-cars-stage my-4 sm:my-6">
       <!-- Showroom Platform Horizon Line -->
       <div class="hero-cars-platform-line"></div>
 
@@ -212,10 +206,8 @@
               loading="eager"
             />
           </div>
-          <!-- Elegant Gold and Navy Label with HUD Telemetry -->
-          <div class="car-plot-label group-hover:shadow-gold-light/50 relative">
-            <div class="hud-corner-tl"></div>
-            <div class="hud-corner-br"></div>
+          <!-- Elegant Gold and Navy Label -->
+          <div class="car-plot-label group-hover:shadow-gold-light/40 relative">
             <span class="plot-text">PLOT NO. 121</span>
             <span class="separator">—</span>
             <span class="car-model">HYUNDAI CRETA</span>
@@ -239,10 +231,8 @@
               loading="eager"
             />
           </div>
-          <!-- Elegant Gold and Navy Label with HUD Telemetry -->
-          <div class="car-plot-label group-hover:shadow-gold-light/50 relative">
-            <div class="hud-corner-tl"></div>
-            <div class="hud-corner-br"></div>
+          <!-- Elegant Gold and Navy Label -->
+          <div class="car-plot-label group-hover:shadow-gold-light/40 relative">
             <span class="plot-text">PLOT NO. 201</span>
             <span class="separator">—</span>
             <span class="car-model">MAHINDRA XUV 7XO</span>
@@ -734,10 +724,6 @@
           </div>
 
           <div class="relative rounded-3xl overflow-hidden border-2 border-gold-metallic/40 shadow-2xl group cursor-pointer" onclick="window.openSitePlanViewer()">
-            <div class="hud-corner-tl z-20"></div>
-            <div class="hud-corner-tr z-20"></div>
-            <div class="hud-corner-bl z-20"></div>
-            <div class="hud-corner-br z-20"></div>
             <div class="blueprint-radar-sweep"></div>
             <img 
               id="masterplan-display-img"
