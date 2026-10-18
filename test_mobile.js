@@ -80,6 +80,19 @@ assert(html.includes('https://wa.me/918218553028'), 'WhatsApp button configured 
 assert(html.includes('inputmode="numeric"') || html.includes('inputmode="tel"'), 'Phone input sets numeric keyboard on mobile');
 assert(html.includes('autocomplete="name"'), 'Name input provides autocomplete');
 assert(html.includes('autocomplete="tel"'), 'Phone input provides autocomplete');
+assert(html.includes('dynamic-call-btn flex-1 min-h-[44px]') || html.includes('dynamic-call-btn flex-1 min-h-[48px]'), 'Sticky bottom action bar buttons enforce 44px+ touch targets');
+
+// 8. Advanced Responsive Layout Verification
+console.log('\n--- 7. Advanced Responsive Layout & Interaction Verification ---');
+assert(html.includes('COORDINATES: 29.4475° N, 77.3141° E // SHAMLI SECTOR 1') && (html.includes('break-words') || html.includes('flex-wrap')), 'Coordinates badge protected against mobile overflow');
+assert(html.includes('car-tab-btn') && html.includes('grid-cols-2'), 'Car showcase tab switcher adapts to responsive 2-column mobile grid');
+
+const galleryJs = fs.readFileSync(path.join(projectRoot, 'assets/js/gallery.js'), 'utf8');
+assert(galleryJs.includes('flex-col sm:flex-row') && galleryJs.includes('min-h-[44px]'), 'Project card action buttons stack on mobile with 44px+ touch targets');
+
+const appJs = fs.readFileSync(path.join(projectRoot, 'assets/js/app.js'), 'utf8');
+assert(appJs.includes('M6 18L18 6M6 6l12 12') && appJs.includes('M4 6h16M4 12h16M4 18h16'), 'Mobile navigation menu button morphs between hamburger and close X icon');
+assert(appJs.includes('Escape') && appJs.includes('contains(e.target)'), 'Mobile navigation menu supports click-outside and Escape key dismissal');
 
 console.log(`\n==================================================`);
 console.log(`MOBILE AUDIT SUMMARY: ${passed} PASSED, ${failed} FAILED`);

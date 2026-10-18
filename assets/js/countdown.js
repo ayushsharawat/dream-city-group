@@ -25,6 +25,7 @@
     if (sample && sample.offsetHeight > 0) {
       return sample.offsetHeight;
     }
+    if (window.innerWidth < 380) return 42;
     if (window.innerWidth < 480) return 48;
     if (window.innerWidth < 768) return 64;
     if (window.innerWidth < 1024) return 80;

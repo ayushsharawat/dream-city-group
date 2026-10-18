@@ -178,9 +178,9 @@
       </div>
 
       <!-- Telemetry Coordinates Badge -->
-      <div class="mt-2 flex items-center justify-center gap-2 text-[9px] sm:text-xs font-mono font-bold tracking-widest text-navy-900/75 uppercase">
-        <span class="w-1.5 h-1.5 rounded-full bg-cyan-600 animate-ping"></span>
-        <span>COORDINATES: 29.4475° N, 77.3141° E // SHAMLI SECTOR 1</span>
+      <div class="mt-2 flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 text-[9px] sm:text-xs font-mono font-bold tracking-wider sm:tracking-widest text-navy-900/75 uppercase max-w-full px-2 text-center">
+        <span class="w-1.5 h-1.5 rounded-full bg-cyan-600 animate-ping shrink-0"></span>
+        <span class="break-words">COORDINATES: 29.4475° N, 77.3141° E // SHAMLI SECTOR 1</span>
       </div>
 
     </div>
@@ -826,20 +826,20 @@
       </div>
 
       <!-- Car Toggle Tabs -->
-      <div class="inline-flex p-1.5 rounded-full bg-navy-950/90 border border-gold-metallic/40 shadow-2xl backdrop-blur-md mb-8">
+      <div class="w-full max-w-xs sm:max-w-md mx-auto grid grid-cols-2 p-1 sm:p-1.5 rounded-full bg-navy-950/90 border border-gold-metallic/40 shadow-2xl backdrop-blur-md mb-8">
         <button 
           type="button" 
-          class="car-tab-btn px-6 py-2.5 rounded-full text-xs font-bold tracking-wider uppercase transition-all duration-300"
+          class="car-tab-btn min-h-[44px] px-2 sm:px-6 py-2.5 rounded-full text-[11px] sm:text-xs font-bold tracking-wider uppercase transition-all duration-300 text-center truncate flex items-center justify-center"
           data-car="creta"
         >
-          PLOT 121: HYUNDAI CRETA
+          <span class="hidden sm:inline">PLOT 121:&nbsp;</span>CRETA
         </button>
         <button 
           type="button" 
-          class="car-tab-btn px-6 py-2.5 rounded-full text-xs font-bold tracking-wider uppercase transition-all duration-300"
+          class="car-tab-btn min-h-[44px] px-2 sm:px-6 py-2.5 rounded-full text-[11px] sm:text-xs font-bold tracking-wider uppercase transition-all duration-300 text-center truncate flex items-center justify-center"
           data-car="xuv"
         >
-          PLOT 201: MAHINDRA XUV 7XO
+          <span class="hidden sm:inline">PLOT 201:&nbsp;</span>XUV 7XO
         </button>
       </div>
 
@@ -973,7 +973,7 @@
               href="https://maps.google.com/?q=Shamli,+Uttar+Pradesh" 
               target="_blank" 
               rel="noopener noreferrer" 
-              class="btn-gold inline-flex items-center gap-2"
+              class="btn-gold inline-flex items-center justify-center gap-2 w-full sm:w-auto min-h-[48px]"
             >
               <span>VIEW ON GOOGLE MAPS</span>
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1326,13 +1326,13 @@
        STICKY BOTTOM QUICK ACTION BAR (FOR MOBILE USERS)
        ====================================================================== -->
   <div class="fixed bottom-0 left-0 right-0 z-40 sm:hidden bg-navy-950/95 border-t border-gold-metallic/40 p-2.5 flex items-center gap-3 backdrop-blur-md">
-    <a href="tel:+918218553028" class="dynamic-call-btn flex-1 py-2.5 rounded-xl border border-gold-metallic/60 text-gold-light font-bold text-xs uppercase tracking-wider text-center flex items-center justify-center gap-1.5">
+    <a href="tel:+918218553028" class="dynamic-call-btn flex-1 min-h-[44px] py-2.5 rounded-xl border border-gold-metallic/60 text-gold-light font-bold text-xs uppercase tracking-wider text-center flex items-center justify-center gap-1.5">
       <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
         <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"></path>
       </svg>
       <span>Call Now</span>
     </a>
-    <a href="https://wa.me/918218553028" target="_blank" rel="noopener noreferrer" class="dynamic-wa-btn flex-1 py-2.5 rounded-xl bg-emerald-600 text-white font-bold text-xs uppercase tracking-wider text-center flex items-center justify-center gap-1.5">
+    <a href="https://wa.me/918218553028" target="_blank" rel="noopener noreferrer" class="dynamic-wa-btn flex-1 min-h-[44px] py-2.5 rounded-xl bg-emerald-600 text-white font-bold text-xs uppercase tracking-wider text-center flex items-center justify-center gap-1.5">
       <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
         <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.06-2.11-.531-1.637-.686-2.673-2.355-2.753-2.463-.081-.108-.66-8.79-.66-1.677 0-.798.42-1.192.569-1.346.149-.153.325-.192.433-.192.108 0 .217.001.312.006.1.005.234-.038.366.279.135.324.46 1.12.5 1.202.041.081.068.176.014.283-.054.108-.081.176-.162.27-.081.095-.17.212-.243.285-.081.08-.166.168-.071.33.095.162.421.696.904 1.126.621.553 1.144.724 1.306.805.163.081.258.068.353-.041.095-.108.406-.473.514-.635.108-.163.217-.135.365-.081.149.054.947.447 1.11.528.162.081.27.122.311.189.041.068.041.393-.103.798z"/>
       </svg>

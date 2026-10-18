@@ -23,28 +23,61 @@
 
     // Mobile menu toggle
     if (mobileMenuBtn && mobileMenu) {
-      mobileMenuBtn.addEventListener("click", () => {
-        const isExpanded = mobileMenu.classList.contains("hidden");
-        if (isExpanded) {
-          mobileMenu.classList.remove("hidden");
-          mobileMenuBtn.setAttribute("aria-expanded", "true");
+      const hamburgerPath = "M4 6h16M4 12h16M4 18h16";
+      const closePath = "M6 18L18 6M6 6l12 12";
+
+      function updateMenuIcon(isOpen) {
+        const svgPath = mobileMenuBtn.querySelector("svg path");
+        if (svgPath) {
+          svgPath.setAttribute("d", isOpen ? closePath : hamburgerPath);
+        }
+      }
+
+      function openMenu() {
+        mobileMenu.classList.remove("hidden");
+        mobileMenuBtn.setAttribute("aria-expanded", "true");
+        updateMenuIcon(true);
+      }
+
+      function closeMenu() {
+        mobileMenu.classList.add("hidden");
+        mobileMenuBtn.setAttribute("aria-expanded", "false");
+        updateMenuIcon(false);
+      }
+
+      window.closeMobileMenu = closeMenu;
+
+      mobileMenuBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const isClosed = mobileMenu.classList.contains("hidden");
+        if (isClosed) {
+          openMenu();
         } else {
-          mobileMenu.classList.add("hidden");
-          mobileMenuBtn.setAttribute("aria-expanded", "false");
+          closeMenu();
         }
       });
 
       mobileLinks.forEach((link) => {
         link.addEventListener("click", () => {
-          mobileMenu.classList.add("hidden");
-          mobileMenuBtn?.setAttribute("aria-expanded", "false");
+          closeMenu();
         });
       });
 
-      window.closeMobileMenu = function () {
-        mobileMenu.classList.add("hidden");
-        mobileMenuBtn?.setAttribute("aria-expanded", "false");
-      };
+      // Close menu when clicking outside
+      document.addEventListener("click", (e) => {
+        if (!mobileMenu.classList.contains("hidden")) {
+          if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+            closeMenu();
+          }
+        }
+      });
+
+      // Close menu on Escape key
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && !mobileMenu.classList.contains("hidden")) {
+          closeMenu();
+        }
+      });
     }
   }
 

@@ -98,16 +98,16 @@
               </div>
             </div>
 
-            <!-- Actions -->
-            <div class="pt-4 border-t border-slate-200 flex items-center justify-between gap-3">
+            <!-- Actions (Responsive: full-width stacked on mobile, row on tablet/desktop) -->
+            <div class="pt-4 border-t border-slate-200 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-2.5 sm:gap-3">
               <a 
                 href="${proj.googleMapsUrl}" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                class="inline-flex items-center gap-1.5 text-xs font-bold text-navy-900 hover:text-gold-bronze transition-colors"
+                class="inline-flex items-center justify-center sm:justify-start gap-1.5 min-h-[44px] sm:min-h-0 py-2 sm:py-0 px-3 sm:px-0 rounded-xl sm:rounded-none bg-slate-100 sm:bg-transparent text-xs font-bold text-navy-900 hover:text-gold-bronze transition-colors text-center"
               >
                 <span>VIEW ON GOOGLE MAPS</span>
-                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
                 </svg>
               </a>
@@ -115,7 +115,7 @@
               <button 
                 type="button" 
                 onclick="window.openProjectModal('${proj.id}')"
-                class="px-4 py-2 rounded-full text-xs font-bold tracking-wider uppercase text-navy-950 bg-gradient-to-r from-gold-light via-gold-metallic to-gold-bronze hover:from-white hover:to-gold-light transition-all shadow-md"
+                class="min-h-[44px] px-4 py-2.5 sm:py-2 rounded-xl sm:rounded-full text-xs font-bold tracking-wider uppercase text-navy-950 bg-gradient-to-r from-gold-light via-gold-metallic to-gold-bronze hover:from-white hover:to-gold-light transition-all shadow-md text-center flex items-center justify-center"
               >
                 PROJECT DETAILS
               </button>
